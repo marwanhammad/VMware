@@ -1,0 +1,19 @@
+<IPs>
+	<AdminUplink>100.64.</AdminUplink>
+	<CSSASubnet></CSSASubnet>
+	<InetUplink></InetUplink>
+	<OrgVDC>
+		<name></name>
+		<PublicIPs>
+			<PublicIP></PublicIP>
+			<PublicIP></PublicIP>
+		</PublicIPs>
+	</OrgVDC>
+	<OrgVDC>
+		<name></name>
+		<PublicIPs>
+			<PublicIP></PublicIP>
+			<PublicIP></PublicIP>
+		</PublicIPs>
+	</OrgVDC>
+</IPs>

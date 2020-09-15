@@ -1,0 +1,30 @@
+<vmext:VMWExternalNetwork
+   xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5"
+   xmlns:vcloud="http://www.vmware.com/vcloud/v1.5"
+   name="ExtNetName"
+   type="application/vnd.vmware.admin.vmwexternalnet+xml">
+   <vcloud:Description>External Network </vcloud:Description>
+   <vcloud:Configuration>
+      <vcloud:IpScopes>
+         <vcloud:IpScope>
+            <vcloud:IsInherited>false</vcloud:IsInherited>
+            <vcloud:Gateway>Gatewayedit</vcloud:Gateway>
+			<vcloud:Netmask>Netmaskedit</vcloud:Netmask>
+            <vcloud:IsEnabled>true</vcloud:IsEnabled>
+			<vcloud:IpRanges>
+				<vcloud:IpRange>
+					<vcloud:StartAddress>StartAddressedit</vcloud:StartAddress>
+					<vcloud:EndAddress>EndAddressedit</vcloud:EndAddress>
+				</vcloud:IpRange>
+			</vcloud:IpRanges>
+         </vcloud:IpScope>
+      </vcloud:IpScopes>
+      <vcloud:FenceMode>isolated</vcloud:FenceMode>
+   </vcloud:Configuration>
+   <vmext:VimPortGroupRef>
+      <vmext:VimServerRef
+         href="VCServerRef"/>		 
+      <vmext:MoRef>MoRefedit</vmext:MoRef>
+      <vmext:VimObjectType>DV_PORTGROUP</vmext:VimObjectType>
+   </vmext:VimPortGroupRef>
+</vmext:VMWExternalNetwork>

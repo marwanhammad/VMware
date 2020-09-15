@@ -1,0 +1,23 @@
+<AdminOrg xmlns="http://www.vmware.com/vcloud/v1.5" name="Org_Name" type="application/vnd.vmware.admin.organization+xml">
+  <Description>Org_Description</Description>
+  <FullName>Org_FullName</FullName>
+  <IsEnabled>true</IsEnabled>
+  <Settings>
+    <OrgGeneralSettings>
+      <CanPublishCatalogs>false</CanPublishCatalogs>
+      <CanPublishExternally>false</CanPublishExternally>
+      <CanSubscribe>Can_Subscribe</CanSubscribe>
+      <DeployedVMQuota>0</DeployedVMQuota>
+      <StoredVmQuota>0</StoredVmQuota>
+      <UseServerBootSequence>false</UseServerBootSequence>
+      <DelayAfterPowerOnSeconds>0</DelayAfterPowerOnSeconds>
+    </OrgGeneralSettings>
+    <OrgEmailSettings>
+      <IsDefaultSmtpServer>true</IsDefaultSmtpServer>
+      <IsDefaultOrgEmail>true</IsDefaultOrgEmail>
+      <FromEmailAddress/>
+      <DefaultSubjectPrefix/>
+      <IsAlertEmailToAllAdmins>true</IsAlertEmailToAllAdmins>
+    </OrgEmailSettings>
+  </Settings>
+</AdminOrg>

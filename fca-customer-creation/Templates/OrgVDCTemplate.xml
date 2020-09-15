@@ -1,0 +1,33 @@
+<CreateVdcParams xmlns="http://www.vmware.com/vcloud/v1.5" name="OrgvDC_Name">
+  <Description>OrgvDC_Name</Description>
+  <AllocationModel>OrgvDC_AllocationVApp</AllocationModel>
+  <ComputeCapacity>
+    <Cpu>
+      <Units>MHz</Units>
+      <Allocated>OrgvDC_Cpu_Allocated</Allocated>
+      <Limit>OrgvDC_Cpu_Limit</Limit>
+    </Cpu>
+    <Memory>
+      <Units>MB</Units>
+      <Allocated>OrgvDC_Memory_Allocated</Allocated>
+      <Limit>OrgvDC_Memory_Limit</Limit>
+    </Memory>
+  </ComputeCapacity>
+  <NicQuota>0</NicQuota>
+  <NetworkQuota>100</NetworkQuota>
+  <VdcStorageProfile>
+    <Enabled>true</Enabled>
+    <Units>MB</Units>
+    <Limit>OrgvDC_Storage_Limit</Limit>
+    <Default>true</Default>
+    <ProviderVdcStorageProfile href="StorageProfile_URL"/>
+  </VdcStorageProfile>
+  <ResourceGuaranteedMemory>OrgVDCMemory_Guaranteed</ResourceGuaranteedMemory>
+  <ResourceGuaranteedCpu>OrgVDCPU_Guaranteed</ResourceGuaranteedCpu>
+  <VCpuInMhz>OrgvDC_CPU_Speed</VCpuInMhz>
+  <IsThinProvision>true</IsThinProvision>
+  <NetworkPoolReference href="NetworkPool_URL"/>
+  <ProviderVdcReference name="PVDC_Name" href="PVDC_URL"/>
+  <UsesFastProvisioning>false</UsesFastProvisioning>
+  <OverCommitAllowed>true</OverCommitAllowed>
+</CreateVdcParams>

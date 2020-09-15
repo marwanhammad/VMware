@@ -1,0 +1,21 @@
+<OrgVdcNetwork xmlns="http://www.vmware.com/vcloud/v1.5" name="OrgNet_Name">
+  <Description>OrgNet_Description</Description>
+  <Configuration>
+    <IpScopes>
+      <IpScope>
+        <IsInherited>false</IsInherited>
+        <Gateway>OrgNet_Gateway</Gateway>
+        <Netmask>OrgNet_Netmask</Netmask>
+        <IpRanges>
+          <IpRange>
+            <StartAddress>OrgNet_StartAddress</StartAddress>
+            <EndAddress>OrgNet_EndAddress</EndAddress>
+          </IpRange>
+        </IpRanges>
+      </IpScope>
+    </IpScopes>
+	<ParentNetwork href="https://3.flexible-computing-advanced.orange-business.com/api/admin/network/ExternalNetworkID" type="application/vnd.vmware.admin.network+xml"/>
+    <FenceMode>bridged</FenceMode>
+  </Configuration>
+  <IsShared>true</IsShared>
+</OrgVdcNetwork>

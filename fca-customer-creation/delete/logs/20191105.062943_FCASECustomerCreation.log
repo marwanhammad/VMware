@@ -1,0 +1,148 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20191105182943
+Username: EQ1ADM\mhammad.DCO
+RunAs User: EQ1ADM\mhammad.DCO
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 6512
+PSVersion: 5.1.14409.1018
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1018
+BuildVersion: 10.0.14409.1018
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+11/5/2019 6:29:43 PM [Main] : Script version: v1.0.1
+11/5/2019 6:29:43 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+11/5/2019 6:29:43 PM [Main] : ImportModule Debug-Functions.ps1
+11/5/2019 6:29:43 PM [Main] : ImportModule Exit-function.ps1
+11/5/2019 6:29:43 PM [Main] : ImportModule Get-Inifile.ps1
+11/5/2019 6:29:43 PM [Main] : ImportModule Get-ScriptVersion.ps1
+11/5/2019 6:29:43 PM [Main] : ImportModule NSX-Functions.ps1
+11/5/2019 6:29:43 PM [Main] : ImportModule VCD-functions.ps1
+11/5/2019 6:29:43 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+11/5/2019 6:29:43 PM [Main] : Site Name  FCA_VDR
+11/5/2019 6:29:43 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\SiteInfo\FCA_VDR.ini
+11/5/2019 6:29:43 PM [Main]
+11/5/2019 6:29:44 PM [VCD] : Script version: v2.0.7
+11/5/2019 6:29:44 PM [VCD] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+11/5/2019 6:29:45 PM [VCD] : PowerCli connected to vCenter
+11/5/2019 6:29:45 PM [VCD] : The Site FCA_VDR is selected
+11/5/2019 6:29:45 PM [VCD] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+11/5/2019 6:29:45 PM [VCD] : The API Version 27.0 is selected
+PS>TerminatingError(Add-Type): "Cannot add type. The type name 'TrustAllCertsPolicy' already exists."
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+
+11/5/2019 6:29:45 PM [VCD] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+11/5/2019 6:29:45 PM [VCD] : User FCA_SE@system authenticated
+11/5/2019 6:30:49 PM [VCD][ExternalNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\ExternalNetwork.xml
+11/5/2019 6:30:52 PM [VCD][ExternalNetwork] : Updating XML ADMIN External Network file
+11/5/2019 6:30:52 PM [VCD][ExternalNetwork] : Creating Admin External Network :FCA_VDR_Automation_Test_ADMIN_INTERCO_vCDESG_S1
+11/5/2019 6:30:52 PM [VCD][ExternalNetwork] : Creating External Network :192.168.5.14 / 255.255.255.240
+11/5/2019 6:31:01 PM [VCD][ExternalNetwork] : Task submitted successfully, waiting for result
+11/5/2019 6:31:02 PM [VCD][ExternalNetwork] : queued
+11/5/2019 6:31:07 PM [VCD][ExternalNetwork] : Task completed successfully
+True
+11/5/2019 6:31:09 PM [VCD][ExternalNetwork] : Updating INET External Network   XML file
+11/5/2019 6:31:09 PM [VCD][ExternalNetwork] : Creating INET External Network :FCA_VDR_Automation_Test_INET_INTERCO_vCDESG_S1
+11/5/2019 6:31:09 PM [VCD][ExternalNetwork] : Creating INET External Network :100.64.102.254 / 255.255.255.0
+11/5/2019 6:31:18 PM [VCD][ExternalNetwork] : Task submitted successfully, waiting for result
+11/5/2019 6:31:18 PM [VCD][ExternalNetwork] : queued
+11/5/2019 6:31:23 PM [VCD][ExternalNetwork] : Task completed successfully
+True
+11/5/2019 6:31:23 PM [VCD][Org] : Get Org List
+11/5/2019 6:31:24 PM [VCD][Org] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgTemplate.xml
+11/5/2019 6:31:24 PM [VCD][Org] : Creating Org :FCA_VDR_Automation_Test
+11/5/2019 6:32:30 PM [VCD][OrgVDC] : Get Existing OrgVDC List
+11/5/2019 6:32:30 PM [VCD][OrgVDC] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCTemplate.xml
+11/5/2019 6:32:30 PM [VCD][OrgVDC] : Get PVDCs List
+11/5/2019 6:32:39 PM [VCD][OrgVDC] : Get PVDC Info : PVDCNUVDRVCAN01
+11/5/2019 6:33:00 PM [VCD][OrgVDC] : Creating OrgVDC :OrgVDC1
+11/5/2019 6:33:01 PM [VCD][OrgVDC] : Task submitted successfully, waiting for result
+11/5/2019 6:33:01 PM [VCD][OrgVDC] : Task running
+11/5/2019 6:33:06 PM [VCD][OrgVDC] : Task running
+11/5/2019 6:33:11 PM [VCD][OrgVDC] : Task running
+11/5/2019 6:33:16 PM [VCD][OrgVDC] : Task running
+11/5/2019 6:33:21 PM [VCD][OrgVDC] : Task completed successfully
+11/5/2019 6:33:21 PM [VCD][OrgVDC] : Task Status:True
+11/5/2019 6:33:21 PM [VCD][vEdge] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCEdgeTemplate.xml
+11/5/2019 6:33:22 PM [VCD][vEdge] : Task submitted successfully, waiting for result
+11/5/2019 6:33:22 PM [VCD][vEdge] : queued
+11/5/2019 6:33:27 PM [VCD][vEdge] : Task running
+11/5/2019 6:33:32 PM [VCD][vEdge] : Task running
+11/5/2019 6:33:37 PM [VCD][vEdge] : Task running
+11/5/2019 6:33:42 PM [VCD][vEdge] : Task running
+11/5/2019 6:33:47 PM [VCD][vEdge] : Task running
+11/5/2019 6:33:52 PM [VCD][vEdge] : Task running
+11/5/2019 6:33:57 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:02 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:07 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:12 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:17 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:22 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:27 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:32 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:37 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:42 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:47 PM [VCD][vEdge] : Task running
+11/5/2019 6:34:52 PM [VCD][vEdge] : Task completed successfully
+11/5/2019 6:34:52 PM [VCD][OrgNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVdcNetwork.xml
+11/5/2019 6:34:52 PM [VCD][OrgNetwork] : Creating 	Org Network :Admin_OrgNetwork
+11/5/2019 6:34:53 PM [VCD][OrgNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCTemplate.xml
+11/5/2019 6:34:53 PM [VCD][OrgNetwork] : Get PVDCs List
+11/5/2019 6:35:01 PM [VCD][OrgNetwork] : Get PVDC Info : PVDCNUVDRVCANHP01
+PS>TerminatingError(Invoke-RestMethod): "Cannot validate argument on parameter 'Uri'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+Invoke-RestMethod : Cannot validate argument on parameter 'Uri'. The argument is null or empty. Provide an argument 
+that is not null or empty, and then try the command again.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:105 char:40
++     $responsePVDC= Invoke-RestMethod -Uri $PVDCURL -Headers $headers  ...
++                                           ~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Invoke-RestMethod], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+Invoke-RestMethod : Cannot validate argument on parameter 'Uri'. The argument is null or empty. Provide an argument
+that is not null or empty, and then try the command again.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:105 char:40
++     $responsePVDC= Invoke-RestMethod -Uri $PVDCURL -Headers $headers  ...
++                                           ~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Invoke-RestMethod], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+
+Cannot index into a null array.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:109 char:38
++ ... PoolURL.count -eq '0'){ $Script:NetworkPoolURL = $NetworkPoolList[0]}
++                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+Cannot index into a null array.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:109 char:38
++ ... PoolURL.count -eq '0'){ $Script:NetworkPoolURL = $NetworkPoolList[0]}
++                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+
+11/5/2019 6:35:01 PM [VCD][OrgNetwork] : Creating OrgVDC :OrgVDC2
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+11/5/2019 6:35:01 PM [Main]
+**********************
+Windows PowerShell transcript end
+End time: 20191105183501
+**********************

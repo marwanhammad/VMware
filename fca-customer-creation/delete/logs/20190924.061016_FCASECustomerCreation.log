@@ -1,0 +1,70 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190924181016
+Username: EQ1ADM\mhammad.DCO
+RunAs User: EQ1ADM\mhammad.DCO
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 59548
+PSVersion: 5.1.14409.1018
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1018
+BuildVersion: 10.0.14409.1018
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+9/24/2019 6:10:16 PM [Main] : Script version: v1.0.1
+9/24/2019 6:10:16 PM [Main] : ImportModel ConvertTo-IPv4MaskString.ps1
+9/24/2019 6:10:16 PM [Main] : ImportModel Debug-Functions.ps1
+9/24/2019 6:10:16 PM [Main] : ImportModel Exit-function.ps1
+9/24/2019 6:10:16 PM [Main] : ImportModel Get-Inifile.ps1
+9/24/2019 6:10:16 PM [Main] : ImportModel Get-ScriptVersion.ps1
+9/24/2019 6:10:16 PM [Main] : ImportModel NSX-Functions.ps1
+9/24/2019 6:10:16 PM [Main] : ImportModel VCD-functions.ps1
+9/24/2019 6:10:16 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+9/24/2019 6:10:16 PM [Main] : Site Name  FCA_VDR
+9/24/2019 6:10:16 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+9/24/2019 6:10:16 PM [Main]
+9/24/2019 6:10:16 PM [ExtNetwork] : Script version: v1.0.1
+9/24/2019 6:10:16 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+9/24/2019 6:10:18 PM [ExtNetwork] : PowerCli connected to vCenter
+9/24/2019 6:10:18 PM [ExtNetwork] : The Site FCA_VDR is selected
+9/24/2019 6:10:18 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+9/24/2019 6:10:18 PM [ExtNetwork] : The API Version 27.0 is selected
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(New-Object): "Cannot find type [TrustAllCertsPolicy]: verify that the assembly containing this type is loaded."
+New-Object : Cannot find type [TrustAllCertsPolicy]: verify that the assembly containing this type is loaded.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:24 char:56
++ ... vicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
++                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : Cannot find type [TrustAllCertsPolicy]: verify that the assembly containing this type is loaded.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:24 char:56
++ ... vicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
++                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+
+9/24/2019 6:10:18 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+9/24/2019 6:10:19 PM [ExtNetwork] : User FCA_SE@system authenticated
+9/24/2019 6:10:50 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\ExternalNetwork.xml
+9/24/2019 6:10:52 PM [ExtNetwork] : Updating XML ADMIN External Network file
+9/24/2019 6:10:53 PM [ExtNetwork] : Admin External Network already exist:FCA_VDR_Automation_ADMIN_INTERCO_vCDESG_S1
+9/24/2019 6:10:55 PM [ExtNetwork] : Updating INET External Network   XML file
+9/24/2019 6:10:56 PM [ExtNetwork] : Creating INET External Network :FCA_VDR_Automation_INET_INTERCO_vCDESG_S1
+9/24/2019 6:10:56 PM [ExtNetwork] : Creating INET External Network :100.64.102.254 / 255.255.255.0
+9/24/2019 6:11:05 PM [ExtNetwork] : Task submitted successfully, waiting for result
+9/24/2019 6:11:05 PM [ExtNetwork] : queued
+9/24/2019 6:11:10 PM [ExtNetwork] : Task completed successfully
+True
+9/24/2019 6:11:10 PM [Main]
+**********************
+Windows PowerShell transcript end
+End time: 20190924181110
+**********************

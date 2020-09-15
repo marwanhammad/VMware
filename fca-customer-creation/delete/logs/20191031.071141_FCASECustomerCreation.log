@@ -1,0 +1,74 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20191031191141
+Username: OCPINFRA\ereen.thabet
+RunAs User: OCPINFRA\ereen.thabet
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 34728
+PSVersion: 5.1.14409.1018
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1018
+BuildVersion: 10.0.14409.1018
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+10/31/2019 7:11:41 PM [Main] : Script version: v1.0.1
+10/31/2019 7:11:41 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 7:11:41 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 7:11:41 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 7:11:41 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 7:11:41 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 7:11:41 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 7:11:41 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 7:11:41 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE2.xml
+10/31/2019 7:11:41 PM [Main] : Site Name  FCA_VDR
+10/31/2019 7:11:41 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 7:11:41 PM [Main]
+10/31/2019 7:11:41 PM [ExtNetwork] : Script version: v1.0.1
+10/31/2019 7:11:41 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 7:11:42 PM [ExtNetwork] : PowerCli connected to vCenter
+10/31/2019 7:11:42 PM [ExtNetwork] : The Site FCA_VDR is selected
+10/31/2019 7:11:42 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+10/31/2019 7:11:42 PM [ExtNetwork] : The API Version 27.0 is selected
+10/31/2019 7:11:42 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+10/31/2019 7:11:42 PM [ExtNetwork] : User FCA_SE@system authenticated
+10/31/2019 7:11:42 PM [ExtNetwork] : Get Org List
+10/31/2019 7:11:42 PM [ExtNetwork] : Org already exist :FCA_VDR_Automation
+10/31/2019 7:11:42 PM [ExtNetwork] : Get existing one :FCA_VDR_Automation
+10/31/2019 7:11:42 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\UserTemplate.xml
+10/31/2019 7:11:42 PM [ExtNetwork] : Creating New User :System.Xml.XmlElement.Name
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (403) Forbidden.
+10/31/2019 7:11:42 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\UserTemplate.xml
+10/31/2019 7:11:42 PM [ExtNetwork] : Creating New User :System.Xml.XmlElement.Name
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (403) Forbidden.
+10/31/2019 7:11:42 PM [ExtNetwork] : Get Existing OrgVDC List
+10/31/2019 7:11:42 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCTemplate.xml
+10/31/2019 7:11:42 PM [ExtNetwork] : Get PVDCs List
+10/31/2019 7:11:48 PM [ExtNetwork] : Get PVDC Info : PVDCNUVDRVCAN01
+10/31/2019 7:12:07 PM [ExtNetwork] : Creating OrgVDC :OrgVDC1
+0b6c9ebf-d992-4637-8fa2-3c2cfdcdf34a
+10/31/2019 7:12:08 PM [ExtNetwork] : Task submitted successfully, waiting for result
+10/31/2019 7:12:08 PM [ExtNetwork] : queued
+10/31/2019 7:12:13 PM [ExtNetwork] : Task running
+10/31/2019 7:12:18 PM [ExtNetwork] : Task running
+10/31/2019 7:12:23 PM [ExtNetwork] : Task running
+10/31/2019 7:12:28 PM [ExtNetwork] : Task completed successfully
+10/31/2019 7:12:28 PM [ExtNetwork] : Task Status:True
+10/31/2019 7:12:28 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCEdgeTemplate.xml
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "Cannot validate argument on parameter 'Uri'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+WARNING: Invoke-vCloud Exception: Cannot validate argument on parameter 'Uri'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+10/31/2019 7:13:24 PM [ExtNetwork] : Script Terminated
+10/31/2019 7:13:24 PM [Main]
+**********************
+Windows PowerShell transcript end
+End time: 20191031191324
+**********************

@@ -1,0 +1,1327 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20191031130324
+Username: OCPINFRA\ereen.thabet
+RunAs User: OCPINFRA\ereen.thabet
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 10628
+PSVersion: 5.1.14409.1018
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1018
+BuildVersion: 10.0.14409.1018
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+10/31/2019 1:03:24 PM [Main] : Script version: v1.0.1
+10/31/2019 1:03:24 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 1:03:24 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 1:03:24 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 1:03:24 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 1:03:24 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 1:03:24 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 1:03:24 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 1:03:24 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+10/31/2019 1:03:24 PM [Main] : Site Name  FCA_VDR
+10/31/2019 1:03:24 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 1:03:24 PM [PESG] : Script version: v1.0.1
+10/31/2019 1:03:24 PM [PESG] : ImportModel PowerNSX
+WARNING: The generated type defines no public methods or properties.
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+10/31/2019 1:03:26 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:03:29 PM [PESG] : PowerCli connected to vCenter
+10/31/2019 1:03:29 PM [PESG] : PowerNSX connection to the NSX manager
+Using existing PowerCLI connection to 10.19.249.9
+
+Version             : 6.3.6
+BuildNumber         : 8085122
+Credential          : System.Management.Automation.PSCredential
+Server              : 10.19.249.20
+Port                : 443
+Protocol            : https
+ValidateCertificate : False
+VIConnection        : 10.19.249.9
+DebugLogging        : False
+DebugLogfile        : C:\Users\EREEN~1.THA\AppData\Local\Temp\16\PowerNSXLog-admin@10.19.249.20-2019_10_31_13_03_29.log
+
+10/31/2019 1:03:29 PM [PESG] : PowerNSX connected to the NSX manager
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS D:\Scripts\OCBOPS\fca-customer-creation> ls
+
+
+    Directory: D:\Scripts\OCBOPS\fca-customer-creation
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        9/20/2019   1:19 PM                Customers-info
+d-----        9/25/2019   6:55 PM                Logs
+d-----        9/27/2019  10:36 AM                Modules
+d-----        9/16/2019   2:32 PM                Reports
+d-----       10/31/2019   9:06 AM                Scripts
+d-----        9/26/2019   9:28 AM                Templates
+-a----         9/2/2018  11:04 PM           9623 Generate-Report.ps1
+-a----        10/4/2019   9:30 AM           5552 Main.ps1
+-a----        9/16/2019   2:38 PM              0 ReadMe.txt
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> ls
+
+
+    Directory: D:\Scripts\OCBOPS\fca-customer-creation
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        9/20/2019   1:19 PM                Customers-info
+d-----        9/25/2019   6:55 PM                Logs
+d-----        9/27/2019  10:36 AM                Modules
+d-----        9/16/2019   2:32 PM                Reports
+d-----       10/31/2019   9:06 AM                Scripts
+d-----        9/26/2019   9:28 AM                Templates
+-a----         9/2/2018  11:04 PM           9623 Generate-Report.ps1
+-a----        10/4/2019   9:30 AM           5552 Main.ps1
+-a----        9/16/2019   2:38 PM              0 ReadMe.txt
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> .\Main.ps1
+10/31/2019 1:09:38 PM = LOGS directory already exist
+10/31/2019 1:09:38 PM [Main] : Script version: v1.0.1
+10/31/2019 1:09:38 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 1:09:38 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 1:09:38 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 1:09:38 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 1:09:38 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 1:09:38 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 1:09:38 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 1:09:39 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+10/31/2019 1:09:39 PM [Main] : Site Name  FCA_VDR
+10/31/2019 1:09:39 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 1:09:39 PM [PESG] : Script version: v1.0.1
+10/31/2019 1:09:39 PM [PESG] : ImportModel PowerNSX
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+10/31/2019 1:09:39 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:09:40 PM [PESG] : PowerCli connected to vCenter
+10/31/2019 1:09:40 PM [PESG] : PowerNSX connection to the NSX manager
+Using existing PowerCLI connection to 10.19.249.9
+
+Version             : 6.3.6
+BuildNumber         : 8085122
+Credential          : System.Management.Automation.PSCredential
+Server              : 10.19.249.20
+Port                : 443
+Protocol            : https
+ValidateCertificate : False
+VIConnection        : 10.19.249.9
+DebugLogging        : False
+DebugLogfile        : C:\Users\EREEN~1.THA\AppData\Local\Temp\16\PowerNSXLog-admin@10.19.249.20-2019_10_31_13_09_40.log
+
+10/31/2019 1:09:40 PM [PESG] : PowerNSX connected to the NSX manager
+10/31/2019 1:09:59 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1
+10/31/2019 1:10:04 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1; vdnId=16016}
+10/31/2019 1:10:04 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_ADMIN_PESG_U_S1
+10/31/2019 1:10:04 PM [PESG] : Preparing Interface Uplink setting : 100.64.103.67 / 24
+10/31/2019 1:10:04 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_ADMIN_vCDESG_T_S1
+10/31/2019 1:10:04 PM [PESG] : Preparing Interface Internal setting : 192.168.5.14 / 28
+10/31/2019 1:10:04 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_ADMIN_S1
+10/31/2019 1:11:09 PM [PESG] : Renaming PESG
+10/31/2019 1:11:25 PM [PESG] : PESG ID : edge-3223
+10/31/2019 1:11:25 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:11:25 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:11:25 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:11:25 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:11:25 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:11:25 PM [PESG] : UplinkNetwork	 	System.Xml.XmlElement
+10/31/2019 1:11:25 PM [PESG] : NsxTransportZone	Transit-TZ
+10/31/2019 1:11:25 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3223/routing/config
+10/31/2019 1:11:38 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_ULS_INET_vCDESG_T_S1
+10/31/2019 1:11:42 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_ULS_INET_vCDESG_T_S1; vdnId=20244}
+10/31/2019 1:11:42 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_INET_PESG_U_S1
+10/31/2019 1:11:42 PM [PESG] : Preparing Interface Uplink setting : 100.64.1.167 / 24
+10/31/2019 1:11:42 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_INET_vCDESG_T_S1
+10/31/2019 1:11:42 PM [PESG] : Preparing Interface Internal setting : 100.64.102.254 / 24
+10/31/2019 1:11:42 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_INET_S1
+10/31/2019 1:13:02 PM [PESG] : Renaming PESG
+10/31/2019 1:13:23 PM [PESG] : PESG ID : edge-3224
+10/31/2019 1:13:23 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:13:23 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:13:23 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:13:23 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:13:23 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:13:23 PM [PESG] : UplinkNetwork	 	INET-CUST-ACCESS-S1
+10/31/2019 1:13:23 PM [PESG] : NsxTransportZone	Transit-UTZ
+10/31/2019 1:13:23 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3224/routing/config
+10/31/2019 1:13:28 PM [Main]
+10/31/2019 1:13:28 PM [ExtNetwork] : Script version: v1.0.1
+10/31/2019 1:13:28 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:13:30 PM [ExtNetwork] : PowerCli connected to vCenter
+10/31/2019 1:13:30 PM [ExtNetwork] : The Site FCA_VDR is selected
+10/31/2019 1:13:30 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+10/31/2019 1:13:30 PM [ExtNetwork] : The API Version 27.0 is selected
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Add-Type): "Cannot add type. The type name 'TrustAllCertsPolicy' already exists."
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+
+10/31/2019 1:13:30 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+10/31/2019 1:13:30 PM [ExtNetwork] : User FCA_SE@system authenticated
+10/31/2019 1:13:30 PM [ExtNetwork] : Get Org List
+10/31/2019 1:13:30 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgTemplate.xml
+10/31/2019 1:13:30 PM [ExtNetwork] : Creating Org :
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+10/31/2019 1:13:30 PM [ExtNetwork] : Script Terminated
+10/31/2019 1:13:30 PM [Main]
+Transcript stopped, output file is D:\Scripts\OCBOPS\fca-customer-creation\Logs\20191031.010938_FCASECustomerCreation.log
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $OrgListURL
+PS D:\Scripts\OCBOPS\fca-customer-creation> . .\Main.ps1
+10/31/2019 1:17:54 PM = LOGS directory already exist
+10/31/2019 1:17:54 PM [Main] : Script version: v1.0.1
+10/31/2019 1:17:54 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 1:17:54 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 1:17:54 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 1:17:54 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 1:17:54 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 1:17:54 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 1:17:54 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 1:17:54 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+10/31/2019 1:17:54 PM [Main] : Site Name  FCA_VDR
+10/31/2019 1:17:54 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 1:17:54 PM [PESG] : Script version: v1.0.1
+10/31/2019 1:17:54 PM [PESG] : ImportModel PowerNSX
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+10/31/2019 1:17:54 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:17:55 PM [PESG] : PowerCli connected to vCenter
+10/31/2019 1:17:55 PM [PESG] : PowerNSX connection to the NSX manager
+Using existing PowerCLI connection to 10.19.249.9
+
+Version             : 6.3.6
+BuildNumber         : 8085122
+Credential          : System.Management.Automation.PSCredential
+Server              : 10.19.249.20
+Port                : 443
+Protocol            : https
+ValidateCertificate : False
+VIConnection        : 10.19.249.9
+DebugLogging        : False
+DebugLogfile        : C:\Users\EREEN~1.THA\AppData\Local\Temp\16\PowerNSXLog-admin@10.19.249.20-2019_10_31_13_17_55.log
+
+10/31/2019 1:17:55 PM [PESG] : PowerNSX connected to the NSX manager
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS D:\Scripts\OCBOPS\fca-customer-creation> . .\Main.ps1
+10/31/2019 1:18:09 PM = LOGS directory already exist
+10/31/2019 1:18:09 PM [Main] : Script version: v1.0.1
+10/31/2019 1:18:09 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 1:18:09 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+10/31/2019 1:18:09 PM [Main] : Site Name  FCA_VDR
+10/31/2019 1:18:09 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 1:18:09 PM [PESG] : Script version: v1.0.1
+10/31/2019 1:18:09 PM [PESG] : ImportModel PowerNSX
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+10/31/2019 1:18:09 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:18:10 PM [PESG] : PowerCli connected to vCenter
+10/31/2019 1:18:10 PM [PESG] : PowerNSX connection to the NSX manager
+Using existing PowerCLI connection to 10.19.249.9
+
+Version             : 6.3.6
+BuildNumber         : 8085122
+Credential          : System.Management.Automation.PSCredential
+Server              : 10.19.249.20
+Port                : 443
+Protocol            : https
+ValidateCertificate : False
+VIConnection        : 10.19.249.9
+DebugLogging        : False
+DebugLogfile        : C:\Users\EREEN~1.THA\AppData\Local\Temp\16\PowerNSXLog-admin@10.19.249.20-2019_10_31_13_18_10.log
+
+10/31/2019 1:18:11 PM [PESG] : PowerNSX connected to the NSX manager
+10/31/2019 1:18:30 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1
+10/31/2019 1:18:35 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1; vdnId=16274}
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_ADMIN_PESG_U_S1
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Uplink setting : 100.64.103.67 / 24
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_ADMIN_vCDESG_T_S1
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Internal setting : 192.168.5.14 / 28
+10/31/2019 1:18:35 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_ADMIN_S1
+10/31/2019 1:19:39 PM [PESG] : Renaming PESG
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+>> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-NsxWebRequest): "Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>"
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : 
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant 
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], 
+InternalNsxApiException
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request :
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], InternalNsxApiExcep
+   tion
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+
+10/31/2019 1:19:39 PM [PESG] : PESG ID : edge-3225
+10/31/2019 1:19:39 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:19:39 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:19:39 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:19:39 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:19:39 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:19:39 PM [PESG] : UplinkNetwork	 	System.Xml.XmlElement
+10/31/2019 1:19:39 PM [PESG] : NsxTransportZone	Transit-TZ
+10/31/2019 1:19:39 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3225/routing/config
+10/31/2019 1:20:01 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_ULS_INET_vCDESG_T_S1
+10/31/2019 1:20:06 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_ULS_INET_vCDESG_T_S1; vdnId=20245}
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_INET_PESG_U_S1
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Uplink setting : 100.64.1.167 / 24
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_INET_vCDESG_T_S1
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Internal setting : 100.64.102.254 / 24
+10/31/2019 1:20:06 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_INET_S1
+10/31/2019 1:21:11 PM [PESG] : Renaming PESG
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+>> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-NsxWebRequest): "Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>"
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : 
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant 
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], 
+InternalNsxApiException
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request :
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], InternalNsxApiExcep
+   tion
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+
+10/31/2019 1:21:12 PM [PESG] : PESG ID : edge-3226
+10/31/2019 1:21:12 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:21:12 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:21:12 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:21:12 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:21:12 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:21:12 PM [PESG] : UplinkNetwork	 	INET-CUST-ACCESS-S1
+10/31/2019 1:21:12 PM [PESG] : NsxTransportZone	Transit-UTZ
+10/31/2019 1:21:12 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3226/routing/config
+10/31/2019 1:21:26 PM [Main]
+10/31/2019 1:21:26 PM [ExtNetwork] : Script version: v1.0.1
+10/31/2019 1:21:26 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:21:27 PM [ExtNetwork] : PowerCli connected to vCenter
+10/31/2019 1:21:27 PM [ExtNetwork] : The Site FCA_VDR is selected
+10/31/2019 1:21:27 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+10/31/2019 1:21:27 PM [ExtNetwork] : The API Version 27.0 is selected
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Add-Type): "Cannot add type. The type name 'TrustAllCertsPolicy' already exists."
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+
+10/31/2019 1:21:28 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+10/31/2019 1:21:28 PM [ExtNetwork] : User FCA_SE@system authenticated
+10/31/2019 1:21:28 PM [ExtNetwork] : Get Org List
+10/31/2019 1:21:28 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgTemplate.xml
+10/31/2019 1:21:28 PM [ExtNetwork] : Creating Org :
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+10/31/2019 1:21:28 PM [ExtNetwork] : Script Terminated
+10/31/2019 1:21:28 PM [Main]
+Transcript stopped, output file is D:\Scripts\OCBOPS\fca-customer-creation\Logs\20191031.011809_FCASECustomerCreation.log
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $OrgListURL
+https://api-3.flexible-computing-advanced.orange-business.com/api/org
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseOrgList=Invoke-RestMethod -Uri $OrgListURL -Headers $headers -Method GET -WebSession $MYSESSION
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseOrgList
+
+xml                                             OrgList
+---                                             -------
+version="1.0" encoding="UTF-8" standalone="yes" OrgList
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $OrgList=$responseOrgList.OrgList.Org
+PS D:\Scripts\OCBOPS\fca-customer-creation>  $OrgList
+
+href                                                                                                   name
+----                                                                                                   ----
+https://3.flexible-computing-advanced.orange-business.com/api/org/00c964d8-3339-43cc-ac35-c879dddc4c5a FCA4_VDR_TIXEO
+https://3.flexible-computing-advanced.orange-business.com/api/org/0120bda4-4da6-414b-9c5a-96d3d91b7077 FCA4_VDR_SG_T...
+https://3.flexible-computing-advanced.orange-business.com/api/org/0270aac1-e48d-4958-9f41-8c6b9ded3eb6 FCA_VDR_PANPH...
+https://3.flexible-computing-advanced.orange-business.com/api/org/03cd1929-1d3e-47b0-bbe2-e19544ccdb09 FC-Templates
+https://3.flexible-computing-advanced.orange-business.com/api/org/0400b28d-3ae7-4c11-ac8e-e48fa7df6882 FCA_VDR_VALIA...
+https://3.flexible-computing-advanced.orange-business.com/api/org/06ea21c7-26ef-4f1f-8a2a-33ea9f4860da FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/075eaaa3-2a6b-4643-ad26-d40a501e3803 FCA_VDR_ORANG...
+https://3.flexible-computing-advanced.orange-business.com/api/org/0789d1d5-7ce4-4c0a-91cd-da20af02d399 FCA_VDR_SHERPA
+https://3.flexible-computing-advanced.orange-business.com/api/org/09ebbebd-5ab8-4f3f-9846-9a64c67d8876 FCA_VDR_FCA_S...
+https://3.flexible-computing-advanced.orange-business.com/api/org/0a6f8d3c-f3d7-4701-92de-6369596972a3 FCA_VDR_JERODIA
+https://3.flexible-computing-advanced.orange-business.com/api/org/0c0e0f95-1d09-4cc3-88e7-8df36b24fa3d FCA4_VDR_OBIT
+https://3.flexible-computing-advanced.orange-business.com/api/org/0c1c1f93-77ed-4d3a-948c-3c9b264c4641 FCA_VDR_ECL1
+https://3.flexible-computing-advanced.orange-business.com/api/org/0d007caa-373f-4975-978f-6b553150201d FCA_VDR_AVENCIA
+https://3.flexible-computing-advanced.orange-business.com/api/org/0e7b9576-4053-4e97-bce2-2d8d0f1d9e1e FCA4_VDR_OINISBI
+https://3.flexible-computing-advanced.orange-business.com/api/org/0eaa1ae2-bd10-4726-81af-8b9f44a0d9f1 FCA4PHLOX
+https://3.flexible-computing-advanced.orange-business.com/api/org/0f46c1e8-b130-4298-96a2-c5a3c3d859ed FCA4_VDR_USO
+https://3.flexible-computing-advanced.orange-business.com/api/org/11638a05-9a74-43dd-926f-29533c53b5d5 FCA_VDR_MON-C...
+https://3.flexible-computing-advanced.orange-business.com/api/org/13ac5e3c-b369-49d6-9e53-1733c56de033 FCA4_VDR_WIN_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/13b7531e-3c22-4af8-90bc-46994512e0aa FCA4_VDR_SOFR...
+https://3.flexible-computing-advanced.orange-business.com/api/org/1729031c-5e3a-49df-a030-d44e9890142c FCA_VDR_SARIC
+https://3.flexible-computing-advanced.orange-business.com/api/org/17c75351-43d2-41b0-a6d9-c8167831ddcf FCA4_VDR_OBS-SEC
+https://3.flexible-computing-advanced.orange-business.com/api/org/186a4c22-35df-40c7-ac0d-29a6e0e906fa FCA_QAHIRA
+https://3.flexible-computing-advanced.orange-business.com/api/org/18d8c924-fffc-4d4a-b0d7-dbfd0929eab8 FCA_VDR_AEQUS
+https://3.flexible-computing-advanced.orange-business.com/api/org/1912ab5b-32b2-4304-9367-6e9794fb517c FCA4_VDR_OCWS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/1b266689-a589-4677-9b80-d12780547dde FCA_VDR_PRATO
+https://3.flexible-computing-advanced.orange-business.com/api/org/1b2f6caa-3a25-4b19-a918-95bed11bb64a FCA4_VDR_DERS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/1b548651-8aa5-466e-a2ce-b50b7e4a6ce0 FCA_VDR_WATERAIR
+https://3.flexible-computing-advanced.orange-business.com/api/org/1b608496-e726-4242-9b98-51ff6ced9fc1 FCA_VDR_LABOSUD
+https://3.flexible-computing-advanced.orange-business.com/api/org/1b8f525a-31ec-42ec-bc4d-bec012e6a3ba FCA_VDR_QUALTECH
+https://3.flexible-computing-advanced.orange-business.com/api/org/1bca1bfc-a251-46c2-8729-66bb0e7e0bd5 FCA_VDR_GFI-H...
+https://3.flexible-computing-advanced.orange-business.com/api/org/1c26594a-e16b-4c66-871b-6b5bcd2cfed2 FCA4_VDR_PLZINT
+https://3.flexible-computing-advanced.orange-business.com/api/org/1c4e1418-2c80-4bd1-b9f4-c8774bc494d5 FCA4_VDR_GEOS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/1c893d0e-78c2-4247-8295-f800996ec26f FCA4_VDR_SMILE
+https://3.flexible-computing-advanced.orange-business.com/api/org/1cb8147d-e64a-4c6e-9e87-a037e9b49090 FCA4_VDR_OGSB...
+https://3.flexible-computing-advanced.orange-business.com/api/org/1f6e38a2-c769-483e-883f-81810001bc69 FCA_VAAS_AGGREKO
+https://3.flexible-computing-advanced.orange-business.com/api/org/20bd27b1-0b16-4994-a83c-79fb0343e60d FCA4_VDR_COQUOON
+https://3.flexible-computing-advanced.orange-business.com/api/org/20e46f7a-f138-48d3-94a1-cac5b5fdcb70 FCA_VDR_PREVA...
+https://3.flexible-computing-advanced.orange-business.com/api/org/21808716-54c0-4b89-978a-5ba59fee9ca1 FCA4_VDR_OBSI...
+https://3.flexible-computing-advanced.orange-business.com/api/org/21ae2f39-1e38-4ccd-a675-e995c39b52ad FCA_VDR_GASCOGNE
+https://3.flexible-computing-advanced.orange-business.com/api/org/2317c596-ad13-4b55-9f28-b56e128af816 FCA_VDR_PROGISEM
+https://3.flexible-computing-advanced.orange-business.com/api/org/2610d618-821b-421a-84c9-bb732a56ddf1 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/2654e916-7b0f-4c3d-999e-46be7e75c134 FCA_VDR_SCALA
+https://3.flexible-computing-advanced.orange-business.com/api/org/2869f490-8a5b-40d1-a8ec-2c915ebcbf28 FCA4_VDR_OCBO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/28ebb44b-11f8-4dc4-826e-988873471d5b FCA4_VDR_OPEN...
+https://3.flexible-computing-advanced.orange-business.com/api/org/2924d366-2a03-423e-9b2c-2a0cd4e532fb FCA4_VDR_OCP
+https://3.flexible-computing-advanced.orange-business.com/api/org/2a11e402-7410-46f3-a0f5-bd0c6fc1c685 FCA4_VDR_NRS
+https://3.flexible-computing-advanced.orange-business.com/api/org/2a18fac5-3485-4614-b7f8-d1336e0277ee FCA_VDR_NGE01
+https://3.flexible-computing-advanced.orange-business.com/api/org/2a49966a-f102-4897-9312-dd9a90f255d0 FCA_VDR_RAIMOND
+https://3.flexible-computing-advanced.orange-business.com/api/org/2bd7a504-202d-4a8a-b861-672b4c67b5b2 FCA_VDR_CIL_L...
+https://3.flexible-computing-advanced.orange-business.com/api/org/2cf91842-84f0-4e06-9d7f-615c6c4dd807 FCA_VDR_LYAMTECH
+https://3.flexible-computing-advanced.orange-business.com/api/org/2d6aabfb-5ea7-4ae7-a894-5d1ea99c33e0 FCA_VDR_SNCF
+https://3.flexible-computing-advanced.orange-business.com/api/org/2e12c2b0-70bc-408c-b847-ebe9a44458a8 FCA_VDR_ALSO
+https://3.flexible-computing-advanced.orange-business.com/api/org/2e1724a4-7107-4df2-8525-9391b5e3f790 FCA_VDR_CER36
+https://3.flexible-computing-advanced.orange-business.com/api/org/2e9da79e-0044-4777-bd39-8c8a867bc110 FCA_VDR_FAFIH
+https://3.flexible-computing-advanced.orange-business.com/api/org/30e5f99e-7cb1-4fc0-8123-71614ebbdaa4 FCA_VDR_KINDY
+https://3.flexible-computing-advanced.orange-business.com/api/org/30e6effb-7bbf-4a55-9c6a-be014159cf5e FCA4_VDR_OCBENG
+https://3.flexible-computing-advanced.orange-business.com/api/org/31ce1f1f-1253-45d4-b08a-0256043e8baf FCA_VDR_EPAYE
+https://3.flexible-computing-advanced.orange-business.com/api/org/3209ab7f-9ad2-4acd-96a5-38cc4ee51f1c FCA_PROLOGUE
+https://3.flexible-computing-advanced.orange-business.com/api/org/3292bb6b-5f2c-4e26-a402-9035134a2c1d FCA4_VDR_OFDT...
+https://3.flexible-computing-advanced.orange-business.com/api/org/33ff6441-8b85-4d12-9427-f8a0a6bffec8 FCA4_VDR_DSI_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/34f2c15b-6176-4020-b13a-19c95d705633 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/35139930-a572-4eaa-8f52-65de637034df FCA_VDR_ACP_CCSP
+https://3.flexible-computing-advanced.orange-business.com/api/org/35265c26-500c-4770-ba67-b56bd3433c1b Zerto_test_VCAN
+https://3.flexible-computing-advanced.orange-business.com/api/org/35543909-1152-4c52-8726-f2621edaa93d FCA_VDR_EMERA
+https://3.flexible-computing-advanced.orange-business.com/api/org/35e5f1da-bf2b-4b79-ac5f-5eb42c24caa9 FCA_VDR_MAPA
+https://3.flexible-computing-advanced.orange-business.com/api/org/37651daa-1222-4700-b5cc-11e183db6b01 FCA_SANDBOX02
+https://3.flexible-computing-advanced.orange-business.com/api/org/38debf49-ff3c-411a-848b-04fa6fbd62c3 FCA4_VDR_D2I
+https://3.flexible-computing-advanced.orange-business.com/api/org/3909f2b3-eb05-42ee-8fab-3d5d98ed83e6 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/392711cb-db8f-4996-93d5-d6dc2cc15978 FCA4_VDR_DJ
+https://3.flexible-computing-advanced.orange-business.com/api/org/3993b693-53e6-40ff-aba0-d0d4eac7ece7 CSE_SHC_LAB
+https://3.flexible-computing-advanced.orange-business.com/api/org/3b928b6f-e205-4a4f-8079-01486269a452 FCA4_VDR_OWF_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/3c8e2b3b-1922-4d85-b3a4-33a51c1044a6 FCA4_VDR_CGN
+https://3.flexible-computing-advanced.orange-business.com/api/org/3cb405de-fea5-46cb-af83-dd4c329dc2a6 FCA4_VDR_OCBMAU
+https://3.flexible-computing-advanced.orange-business.com/api/org/3cc47027-79aa-45ad-826f-b7c3d7a31f7f FCA_VDR_URMF
+https://3.flexible-computing-advanced.orange-business.com/api/org/3ef13710-6323-49a9-91a9-0eb03426d38d FCA_VDR_COPROVA
+https://3.flexible-computing-advanced.orange-business.com/api/org/3f05b67f-40b6-44ce-a80d-a9b114a560b0 FCA_VDR_CPM_M...
+https://3.flexible-computing-advanced.orange-business.com/api/org/3f51ee4b-7e3a-4e43-90b8-fcf2ddbb57d5 FCA4_VDR_DTRS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/40f31019-1ef3-4fc8-85a1-27db3fbdc62b FCA_VDR_EDOCG...
+https://3.flexible-computing-advanced.orange-business.com/api/org/41cf1841-b73f-43e9-b064-be8a47abcef4 VCAN_TEST-Con...
+https://3.flexible-computing-advanced.orange-business.com/api/org/431399a6-36a9-401c-9a39-c5d35719a15d FCA_VDR_EXODATA
+https://3.flexible-computing-advanced.orange-business.com/api/org/454f3c52-213a-4b1b-bdf0-8a5341f3f103 FCA4_VDR_OCBL...
+https://3.flexible-computing-advanced.orange-business.com/api/org/45b4eff0-d981-4f48-b03a-6f77a7a41d39 FCA_VDR_ORDIT...
+https://3.flexible-computing-advanced.orange-business.com/api/org/46538397-d5d7-443f-beed-b57c0c208744 FCA4_VDR_OLS_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/47314636-4d43-4b5a-a98c-40c3bfba6f2b FCA4_VDR_DERS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/4776ac7b-e052-43e8-9dd4-79737d239ba1 FCA4_VDR_S-EU...
+https://3.flexible-computing-advanced.orange-business.com/api/org/47e092af-af2e-4f26-9277-1b5d9eae14d9 FCA_VDR_CHAST...
+https://3.flexible-computing-advanced.orange-business.com/api/org/4875461c-5880-4b6d-ab0f-ee4b5712f535 FCA_VDR_BUISARD
+https://3.flexible-computing-advanced.orange-business.com/api/org/48ae50ea-bb4d-4590-94e0-a6275c6d14dd FCA4_VDR_ISCORE
+https://3.flexible-computing-advanced.orange-business.com/api/org/48afb38f-859b-44a8-bb54-73592a24fac8 FCA_VDR_GUERBET
+https://3.flexible-computing-advanced.orange-business.com/api/org/48cedf65-da84-43cd-b39c-03ca354d87ab FCA_VDR_ADAPE...
+https://3.flexible-computing-advanced.orange-business.com/api/org/4a0f2d63-e9c1-4e6d-a3b3-8cce80ab965d FCA_VDR_NEMEA
+https://3.flexible-computing-advanced.orange-business.com/api/org/4bf180d4-a4c6-432d-89cc-b4ef480a5615 FCA4_VDR_FEDE...
+https://3.flexible-computing-advanced.orange-business.com/api/org/4cd93437-5fd7-405a-a88c-5f40197ae56f FCA4_VDR_SOFEIN
+https://3.flexible-computing-advanced.orange-business.com/api/org/4d6b18df-3516-4244-a8cb-79d74b4c9876 FCA4_VDR_ITE_CMZ
+https://3.flexible-computing-advanced.orange-business.com/api/org/4e0408b9-8f50-4094-b64d-8d843ffa77e2 FCA4_VDR_ITE_CSZ
+https://3.flexible-computing-advanced.orange-business.com/api/org/4e4bf884-f7fe-49ec-b0b3-bd78ffd19a97 FCA4_VDR_SCEU...
+https://3.flexible-computing-advanced.orange-business.com/api/org/4ea36daa-bfda-4382-bff7-fc91df55d744 FCA4_VDR_DERS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/50290d19-1e8d-4366-8e65-78e96f95e003 FCA_VDR_MULTI...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5056bac9-0b32-4a31-9255-b2b32a7d68de FCA_VDR_ELISP...
+https://3.flexible-computing-advanced.orange-business.com/api/org/52a40eb8-8fd8-4362-b366-024616f5d99f FCA_VDR_BOUVET
+https://3.flexible-computing-advanced.orange-business.com/api/org/52ac6b61-0a62-4253-922c-0ca8c209d1d7 FCA4_VDR_OCBVAS1
+https://3.flexible-computing-advanced.orange-business.com/api/org/52cbd8a9-4a03-482e-866f-c2c9c42c86b7 FCA4_VDR_FST_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5327ae47-4c2a-47b9-ac16-897b0e73c058 FCA_VDR_CHBLOIS
+https://3.flexible-computing-advanced.orange-business.com/api/org/54cab196-1144-459e-8601-72c04e98dcbb FCA4_VDR_DPDK...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5685f679-de26-4d3f-b2d8-3c82f4e808a5 FCA_VDR_CISA
+https://3.flexible-computing-advanced.orange-business.com/api/org/56d5baa4-8999-4e6a-afd9-2d692bcf4d5c FCA_VDR_CORDON
+https://3.flexible-computing-advanced.orange-business.com/api/org/596a8f24-a1bd-4081-9bab-58c3981fab64 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5a2c9d4a-c92f-40d0-8dc1-3f45aef9a047 FCA_VDR_MBRIC...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5a83f196-83c2-4940-ab69-efdd327e8f3f FCA4_VDR_OTRUTH
+https://3.flexible-computing-advanced.orange-business.com/api/org/5aecdaa3-3443-4db3-baba-204d5f4725bf FCA_VDR_LUNEA...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5b5ce98a-50f3-4682-8d5c-bc23205c60e5 FCA_VDR_LA-PL...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5d3c9134-189b-4bb8-9d15-3e1e6d4c4f04 FCA_VDR_OCWS
+https://3.flexible-computing-advanced.orange-business.com/api/org/5dcdaeb7-fcda-44d3-a3fe-c2117760898a FCA_VDR_RUBIS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5e0fa601-b740-478c-80a8-aba302ad7fb7 FCA_SANDBOX03
+https://3.flexible-computing-advanced.orange-business.com/api/org/5eeea6b3-be36-42e7-a4e5-a14d119d6e9d FCA_VDR_CE_OR...
+https://3.flexible-computing-advanced.orange-business.com/api/org/5f8f3636-a863-4b0c-bdfa-7bc578fefa34 FCA4_VDR_SPCHOAB
+https://3.flexible-computing-advanced.orange-business.com/api/org/5fc4cfe5-3c8f-466f-97ea-ca56f0dd648f FCA4_VDR_TBSP
+https://3.flexible-computing-advanced.orange-business.com/api/org/604634fc-6516-4040-99a6-0229b0d4603a FCA_VDR_TAMI
+https://3.flexible-computing-advanced.orange-business.com/api/org/61318ad5-6dd9-4fa6-8266-86475370a7a3 FCA_VDR_KALLY...
+https://3.flexible-computing-advanced.orange-business.com/api/org/6155b482-1534-4bda-9448-2665064a58d9 FCA_VDR_OUEST...
+https://3.flexible-computing-advanced.orange-business.com/api/org/637bff9c-ec28-43a6-9e25-d72f74ecb242 FCA4_VDR_INNS
+https://3.flexible-computing-advanced.orange-business.com/api/org/63b5541a-6fc6-4369-a8d6-fc16bcd92eaa FCA_VDR_CERVIN
+https://3.flexible-computing-advanced.orange-business.com/api/org/63ce0b84-84fc-42aa-8551-2f34082b5d0f FCA4_VDR_OBSD...
+https://3.flexible-computing-advanced.orange-business.com/api/org/65000c4d-72ba-4efb-8424-862f7ce62328 FCA_VDR_SYNER...
+https://3.flexible-computing-advanced.orange-business.com/api/org/65561a4c-14c1-47fc-9bbb-8d73f43222e2 FCA4_VDR_TOSCA
+https://3.flexible-computing-advanced.orange-business.com/api/org/657b103f-e8ba-4fc4-b69c-65b822b3813d FCA_VDR_BROTH...
+https://3.flexible-computing-advanced.orange-business.com/api/org/66c7221c-6d6d-4fd7-920d-444a7c5cb2c3 FCA_VDR_AMEG_1
+https://3.flexible-computing-advanced.orange-business.com/api/org/67542d9d-dc57-4a87-9769-16eca8565cf0 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/67f5f2da-7080-4d59-92e0-cfeefd2c479d FCA4_VDR_CSO_PBI
+https://3.flexible-computing-advanced.orange-business.com/api/org/685627c8-9705-4bb0-93b0-999329153d3e FCA4_VDR_PLZOP
+https://3.flexible-computing-advanced.orange-business.com/api/org/68723aa9-c8c6-4e2d-bd57-0284b93a9a3f FCA4_VDR_HM
+https://3.flexible-computing-advanced.orange-business.com/api/org/68a03aef-e267-45a7-9f7f-7463b6e12e96 FCA4_VDR_DERS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/68d7eb9a-ce43-40f6-a578-3134a2e600fc FCA_VDR_SIM_E...
+https://3.flexible-computing-advanced.orange-business.com/api/org/6907bb02-9ff5-4e61-bfc0-949f6df3a390 FCA_VDR_SUPPLAY
+https://3.flexible-computing-advanced.orange-business.com/api/org/6932bdf1-88b5-4e8a-89d3-4f601fdb40ff FCA_VDR_LOCAF...
+https://3.flexible-computing-advanced.orange-business.com/api/org/699f14da-de4c-46ca-a947-88cdf525768c FCA_VDR_PSA_Z...
+https://3.flexible-computing-advanced.orange-business.com/api/org/6a48da4e-ac56-48fd-bb01-f4a466798c6a FCA_VDR_SMATIS
+https://3.flexible-computing-advanced.orange-business.com/api/org/6d0f636e-585a-441a-929b-2d742448517b FCA_VDR_CRABFC
+https://3.flexible-computing-advanced.orange-business.com/api/org/6e3949fc-f0ae-4b5c-8daa-8857e9300f3b FCA_VDR_DEALZ
+https://3.flexible-computing-advanced.orange-business.com/api/org/6ef47dba-39ee-4168-bd03-7f6c0e05bd09 FCA_VDR_Autom...
+https://3.flexible-computing-advanced.orange-business.com/api/org/6f4c3761-47ae-4a06-b584-afd48cd43b46 FCA4_VDR_OIS-ITM
+https://3.flexible-computing-advanced.orange-business.com/api/org/6f6f6b3a-9f4d-4047-957e-a5bc9802e86b FCA_VDR_SOLINEST
+https://3.flexible-computing-advanced.orange-business.com/api/org/704d2f28-0be1-42f5-9eaf-4eb8ae2a2b8b FCA_VDR_ELCIMAI
+https://3.flexible-computing-advanced.orange-business.com/api/org/708aa350-1ea4-4169-bf20-91f8a35f75f0 FCA4_VDR_OAB
+https://3.flexible-computing-advanced.orange-business.com/api/org/7267cca2-57d1-4a48-b3fc-145b613a8170 FCA_VDR_STGS
+https://3.flexible-computing-advanced.orange-business.com/api/org/74740d74-8537-4fae-9c29-7ff80736e9f1 OCB_SHARED_SV...
+https://3.flexible-computing-advanced.orange-business.com/api/org/747cb2d3-8092-4d5d-89e5-b64792e16931 FCA_VDR_DONBOSCO
+https://3.flexible-computing-advanced.orange-business.com/api/org/74be1d62-cff5-4ddc-9b59-b3cb19f59e83 FCA_VDR_SAVENCIA
+https://3.flexible-computing-advanced.orange-business.com/api/org/75a0ee75-3a18-4a53-b945-d538802c976f FCA4_VDR_BETT...
+https://3.flexible-computing-advanced.orange-business.com/api/org/75da53a4-5da3-41da-a35a-98a304b4960c FCA4_VDR_CI
+https://3.flexible-computing-advanced.orange-business.com/api/org/776138bb-e3fa-4247-987a-cbf58c419391 FCA_VDR_GROUP...
+https://3.flexible-computing-advanced.orange-business.com/api/org/780f161a-89fa-4ee9-9719-13a216d5749b FCA4_VDR_ITNS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/782b49f2-ab32-4c08-a1f5-511ac864c5ae FCA_VDR_CDG59
+https://3.flexible-computing-advanced.orange-business.com/api/org/7a5738cb-68ac-4426-98ff-ea37d0aec0b2 FCA_VDR_OAB_T...
+https://3.flexible-computing-advanced.orange-business.com/api/org/7c2e32e3-ef54-4243-9065-f870eb82eabb FCA_VDR_CIVC
+https://3.flexible-computing-advanced.orange-business.com/api/org/7c61082f-f9b3-478a-9e67-ea870076623b FCA_VDR_SURSC...
+https://3.flexible-computing-advanced.orange-business.com/api/org/7cffec15-9775-4019-be87-8c8ff6e2a54b FCA_VDR_PHARM...
+https://3.flexible-computing-advanced.orange-business.com/api/org/7d8f81eb-e6af-4416-89a8-ea9abd35822a FCA4_VDR_OBSI...
+https://3.flexible-computing-advanced.orange-business.com/api/org/80452496-11fe-4a73-b7cd-7f4fe0f64a36 FCA4_VDR_LEXIA
+https://3.flexible-computing-advanced.orange-business.com/api/org/8124b35d-0139-45af-949f-91728f7c0abf FCA4_VDR_OAB_MUT
+https://3.flexible-computing-advanced.orange-business.com/api/org/82ff4280-90b6-4e56-9e1e-9e9255ebd4e3 FCA4_VDR_ISTCIS
+https://3.flexible-computing-advanced.orange-business.com/api/org/83c42987-5391-4847-a2f4-cf8c6f62338a FCA_VDR_NOKIA...
+https://3.flexible-computing-advanced.orange-business.com/api/org/83cac901-9db3-44ed-b3da-7d566580ad7c FCA_VDR_AGC
+https://3.flexible-computing-advanced.orange-business.com/api/org/84426aee-ade1-4dd1-a0fe-286a0ead25cf FCA_VDR_ORANG...
+https://3.flexible-computing-advanced.orange-business.com/api/org/876f0b62-bb72-4c00-bd0e-a6ed4020825e FCA_VDR_LIVANOVA
+https://3.flexible-computing-advanced.orange-business.com/api/org/87dceff4-05e8-4796-a805-52d29ced00b3 FCA_VDR_OH-TEST
+https://3.flexible-computing-advanced.orange-business.com/api/org/885e8074-ff42-404f-89f7-2c212190f789 FCA4_VDR_CISPOC
+https://3.flexible-computing-advanced.orange-business.com/api/org/8a136882-2616-46a1-bd24-56801e992a03 FCA4_VDR_PHENIX
+https://3.flexible-computing-advanced.orange-business.com/api/org/8bccc45c-1e26-4f6d-9bb6-a9f0668eaa74 FCA_VDR_BACK_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/8c028fc9-7c87-47d1-9d3d-9ccc5e93ca42 FCA_SHADOW_IT
+https://3.flexible-computing-advanced.orange-business.com/api/org/8c5cd27d-9fd9-4ad3-9247-e0eb9f9397ef FCA_VDR_VALERO
+https://3.flexible-computing-advanced.orange-business.com/api/org/8cd1e612-4865-4c22-b3ed-cc35e4b24a43 FCA4_VDR_OAB_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/8db0cdcd-3146-4067-bf26-b94ea4752d99 FCA4_VDR_OINI...
+https://3.flexible-computing-advanced.orange-business.com/api/org/8e2af80b-9ad3-48bc-aec3-944ae2909789 FCA4_VDR_OBOS
+https://3.flexible-computing-advanced.orange-business.com/api/org/8ea04930-dd49-46c9-8351-63ec843c5386 FCA_VDR_TRIGANO
+https://3.flexible-computing-advanced.orange-business.com/api/org/8ece1e3b-d1b0-44b3-808c-4577761c1f44 FCA4_VDR_SECOIA
+https://3.flexible-computing-advanced.orange-business.com/api/org/8fb60423-d896-4a1a-b135-bdf479e0b246 FCA_VDR_CERFR...
+https://3.flexible-computing-advanced.orange-business.com/api/org/8ff48fff-089d-4ba8-9cbe-685bb5c8bbd5 FCA_VDR_TRESCAL
+https://3.flexible-computing-advanced.orange-business.com/api/org/8ff8c6fe-d256-44fa-bcd6-a4f0f5cedd74 FCA_TEST_V33
+https://3.flexible-computing-advanced.orange-business.com/api/org/9054ad48-7a12-4cca-be63-582616084236 FCA_VDR_CALIM
+https://3.flexible-computing-advanced.orange-business.com/api/org/9154afbb-6dc3-40ca-a0a0-0f7ab13d444d FCA4_VDR_OLS_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/91af61c3-9c81-4a73-b817-14afff8cb094 FCA_VDR_GLI
+https://3.flexible-computing-advanced.orange-business.com/api/org/91f2767b-40cb-43a0-a84a-5c24f8b4b770 FCA_VDR_TALDI
+https://3.flexible-computing-advanced.orange-business.com/api/org/923b8be3-8942-4f58-988b-02053fe3f8fc FCA_VDR_GROUP...
+https://3.flexible-computing-advanced.orange-business.com/api/org/929e96c9-7deb-4349-bbf1-61f3f659686a FCA_VDR_SOCOTEC
+https://3.flexible-computing-advanced.orange-business.com/api/org/92b5d929-1a6a-4f8f-873e-8c60b6bb8077 FCA_VDR_OPENBEE
+https://3.flexible-computing-advanced.orange-business.com/api/org/941a4cb3-8665-43f3-a706-9d1d3416b7fc FCA4_VDR_OFDT...
+https://3.flexible-computing-advanced.orange-business.com/api/org/95362063-132e-46c8-b064-50d03dffc65a FCA_VDR_GEZIM...
+https://3.flexible-computing-advanced.orange-business.com/api/org/9556dc8e-f145-45a4-bd93-eedf5ab12ab4 ocbdemo
+https://3.flexible-computing-advanced.orange-business.com/api/org/9567f873-bf9c-4dde-80e4-87b5448dee71 FCA4_VDR_OCB-SI
+https://3.flexible-computing-advanced.orange-business.com/api/org/95f0dc0b-3de9-44ae-b57b-7802aee11836 FCA_VDR_P-DAU...
+https://3.flexible-computing-advanced.orange-business.com/api/org/9673296b-492b-4c32-a55d-3e807121eda5 FCA_SRA1
+https://3.flexible-computing-advanced.orange-business.com/api/org/97a1dff9-3523-4a58-a713-73a27ed79f1a FCA_VDR_SCOPELEC
+https://3.flexible-computing-advanced.orange-business.com/api/org/998fff67-c0cf-453f-bd88-2df8e273515d FCA_VDR_BSP
+https://3.flexible-computing-advanced.orange-business.com/api/org/99916179-24b5-4dd1-b7c2-ebab21a399b0 VCAN_TEST_WAF
+https://3.flexible-computing-advanced.orange-business.com/api/org/9a235e9d-200a-471e-8640-4cacac825a10 FCA_CLOUDCOACH
+https://3.flexible-computing-advanced.orange-business.com/api/org/9a7c607b-95eb-4993-b9bc-3d277de3f297 FCA_VDR_AGRIBIO
+https://3.flexible-computing-advanced.orange-business.com/api/org/9b83d243-1835-4177-9aea-acd00d1f19a9 FCA_VDR_BYMYCAR
+https://3.flexible-computing-advanced.orange-business.com/api/org/9bef2d3c-eb2c-43ca-bf87-3baaf291200d FCA_VDR_CA_VE...
+https://3.flexible-computing-advanced.orange-business.com/api/org/9d85d219-207a-439e-9da2-e6e5450da549 FCA_VDR_SARL_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/9ec9128e-b654-4325-a1cd-8e845b47303c FCA_VDR_BALGU...
+https://3.flexible-computing-advanced.orange-business.com/api/org/a082e233-b5aa-4561-ac42-940ab8b00df7 FCA4_VDR_DEI
+https://3.flexible-computing-advanced.orange-business.com/api/org/a12ce708-bed4-496f-b88e-49b9d2ce78aa FCA_VDR_DELQU...
+https://3.flexible-computing-advanced.orange-business.com/api/org/a1eb20d3-0ac9-4b06-a910-a2bd4e9a6aec FCA_VDR_OAB01
+https://3.flexible-computing-advanced.orange-business.com/api/org/a2a12274-bbbc-4bc7-935e-1e60bc3ffe75 FCA_VDR_LE_DORAT
+https://3.flexible-computing-advanced.orange-business.com/api/org/a2b3696f-f8c1-443f-965a-d839fe693d68 FCA_VDR_PRISM...
+https://3.flexible-computing-advanced.orange-business.com/api/org/a35c261f-86ef-4b29-9119-edac0748e74d FCA_VDR_AMBROISE
+https://3.flexible-computing-advanced.orange-business.com/api/org/a45253d6-c5af-44bd-aac4-9638167b67b6 FCA4_VDR_EEQS
+https://3.flexible-computing-advanced.orange-business.com/api/org/a4cf8197-c41d-45ef-aa86-242232de9a15 FCA_VDR_INOVEA
+https://3.flexible-computing-advanced.orange-business.com/api/org/a4d80ac5-1741-4405-b0a3-43aa1eb24a66 FCA_VDR_ASNEE
+https://3.flexible-computing-advanced.orange-business.com/api/org/a50a2b73-7077-4ade-a466-6f16233159b3 FCA_VDR_DEYA
+https://3.flexible-computing-advanced.orange-business.com/api/org/a58c4d8d-4ec3-4411-b06f-d3881a4691ba FCA_VDR_DENJEAN
+https://3.flexible-computing-advanced.orange-business.com/api/org/a5d71d26-91ba-4178-b1ee-e94ea65b6d60 Cube4Demo
+https://3.flexible-computing-advanced.orange-business.com/api/org/a62d9a88-6dd5-4b83-8953-003c656377d4 FCA_VDR_CGI
+https://3.flexible-computing-advanced.orange-business.com/api/org/a700e474-a4fe-4e7b-a1de-7db7c0440090 FCA_VDR_SCRIBA
+https://3.flexible-computing-advanced.orange-business.com/api/org/a7575165-d711-4142-95c5-3e09efa14586 FCA_VDR_MMD
+https://3.flexible-computing-advanced.orange-business.com/api/org/a87147b8-1c7a-45a5-90ce-217882213176 FCA_VDR_VOIP_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/a93c9db9-7471-3192-8d09-a8f7eeda85f9 System
+https://3.flexible-computing-advanced.orange-business.com/api/org/a9c01c54-99ad-471e-b039-610f647a3b7e FCA4_VDR_NEWGAMA
+https://3.flexible-computing-advanced.orange-business.com/api/org/aa839f7b-a1c0-44ae-83e8-8b96a12476c4 FCA4_VDR_FUNA...
+https://3.flexible-computing-advanced.orange-business.com/api/org/aa99f385-8976-4f2f-8b04-e24dfe8bcfca FCA_VDR_ACCEN...
+https://3.flexible-computing-advanced.orange-business.com/api/org/aaa0687b-f7c7-47f7-9aa0-5a08e4ed2595 FCA4_VDR_HIGH...
+https://3.flexible-computing-advanced.orange-business.com/api/org/ab236f1e-64c1-4909-b5dc-e31bcd0abd6e FCA_VDR_HIOLL...
+https://3.flexible-computing-advanced.orange-business.com/api/org/abced320-2c62-47ac-973b-808deeb697a5 FCA_VDR_AIFE
+https://3.flexible-computing-advanced.orange-business.com/api/org/abd1060d-ad48-47a9-8bac-a6031f49e0d7 FCA_VDR_ISIDORE
+https://3.flexible-computing-advanced.orange-business.com/api/org/ac3ce3f3-f0ca-4115-9ecf-842a9ec6d1e3 FCA4_VDR_IDAAS
+https://3.flexible-computing-advanced.orange-business.com/api/org/ad596a46-aebf-48de-9bff-34ab8aab778a PhareOuest
+https://3.flexible-computing-advanced.orange-business.com/api/org/ad7e839e-fa88-4825-975c-344309457049 FCA4_VDR_REDMINE
+https://3.flexible-computing-advanced.orange-business.com/api/org/ad98bb8d-696f-4eae-8ec9-3a03f8412224 FCA4_VDR_OCBD...
+https://3.flexible-computing-advanced.orange-business.com/api/org/ae0c9585-d156-419f-8627-04484bb79b63 FCA_VDR_SGMR
+https://3.flexible-computing-advanced.orange-business.com/api/org/aec122fd-1074-4a55-aad4-7a758da68817 FCA_VDR_ARGECO
+https://3.flexible-computing-advanced.orange-business.com/api/org/af09fa14-a7b1-4379-b871-cbeae337e32b FCA_VDR_OCDEX...
+https://3.flexible-computing-advanced.orange-business.com/api/org/af3ab5f0-0127-49fa-8a9b-a5ff510414a3 FCA4_VDR_COWRIE
+https://3.flexible-computing-advanced.orange-business.com/api/org/b0b242c2-4a4b-4e3b-8076-c8e527194e30 FCA_VDR_AKKA
+https://3.flexible-computing-advanced.orange-business.com/api/org/b11101a2-3ddf-4bfd-a47a-7884953e64d6 FCA4_VDR_CCRC
+https://3.flexible-computing-advanced.orange-business.com/api/org/b207a538-d14a-46c2-a594-ba59de054258 FCA_VDR_ISD_1
+https://3.flexible-computing-advanced.orange-business.com/api/org/b21f401f-2f60-4666-a119-225e030e8465 FCA4_VDR_SCEC...
+https://3.flexible-computing-advanced.orange-business.com/api/org/b3a8c0b5-bc30-4fa5-8a01-c5bb21efd4c1 FCA_VDR_VISIOMED
+https://3.flexible-computing-advanced.orange-business.com/api/org/b56b6ada-6bc0-4811-b6ad-0d3139e749cc FCA_VDR_CIAGEC
+https://3.flexible-computing-advanced.orange-business.com/api/org/b5a0633f-af0d-4ae9-9e1e-be0cd204729d FCA_SRA2
+https://3.flexible-computing-advanced.orange-business.com/api/org/b62301ba-8b4c-494b-a71e-0aa94b15207c FCA_VDR_VITAL
+https://3.flexible-computing-advanced.orange-business.com/api/org/b700c88a-46e9-4571-a692-63c12e029023 FCA4_VDR_DRCE
+https://3.flexible-computing-advanced.orange-business.com/api/org/b785702b-faf0-407e-95cd-3d8a3da193ef FCA4_VDR_FS4O...
+https://3.flexible-computing-advanced.orange-business.com/api/org/b788f0f9-e2b7-4a57-97ca-f8c3183b9b1c FCA_VDR_MALTEM
+https://3.flexible-computing-advanced.orange-business.com/api/org/b8d46fca-f73d-4b40-853f-e3e7fc2d484b FCA_VDR_ARTECO
+https://3.flexible-computing-advanced.orange-business.com/api/org/b986b227-151f-44e2-b097-ef685fc10ef5 FCA_VDR_CASEC...
+https://3.flexible-computing-advanced.orange-business.com/api/org/ba288002-e001-41e4-b9e1-786ca83c9d41 FCA4_VDR_FLEXI
+https://3.flexible-computing-advanced.orange-business.com/api/org/bc622d75-d80d-4f93-917f-a9bf3967cbd0 FCA4_VDR_OLS_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/bd63aa79-be04-44af-b408-9f17acc227f4 EPP_TEST-Conn...
+https://3.flexible-computing-advanced.orange-business.com/api/org/bf5b0f68-52b2-4709-8f45-480ffd2253dc FCA4_VDR_SMGS
+https://3.flexible-computing-advanced.orange-business.com/api/org/bf9a599d-f61b-4edd-90bd-f4342a66990b FCA_VDR_FRANC...
+https://3.flexible-computing-advanced.orange-business.com/api/org/c1461ced-8eab-434f-8145-926425919fdf FCA_MDA_VDR
+https://3.flexible-computing-advanced.orange-business.com/api/org/c24dee66-a77c-470b-8717-998c74831951 FCA_VDR_SEVIGNE
+https://3.flexible-computing-advanced.orange-business.com/api/org/c2ee4fb5-33c4-4e56-b51a-a2f8eff421c4 FCA4_VDR_DERS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/c3412d9d-8eb1-4ca7-84d9-ea95980eed4e FCA_VDR_EUROS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/c3edfda7-5875-4fc6-868d-338bef4f295d FCA_VDR_STAD
+https://3.flexible-computing-advanced.orange-business.com/api/org/c4acdf73-b32c-4a1e-82ea-f8a24a6d34ea FCA_VDR_CAPE_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/c54e5cf2-1547-4e7e-a9cc-8de8444e59b7 FCA_VDR_THOMA...
+https://3.flexible-computing-advanced.orange-business.com/api/org/c634102a-e35b-4805-83a5-f5871858f328 FCA_VDR_OCELORN
+https://3.flexible-computing-advanced.orange-business.com/api/org/c64c0666-82b2-4a20-8a45-688a4b151640 FCA4_VDR_FS4O
+https://3.flexible-computing-advanced.orange-business.com/api/org/c7db2401-4488-4f87-8d25-98ea48fcbb6d FCA_VDR_DGC
+https://3.flexible-computing-advanced.orange-business.com/api/org/c871ffa9-aa16-49f8-9f39-5c73a0d341e0 FCA_VDR_ORANGESA
+https://3.flexible-computing-advanced.orange-business.com/api/org/c9d62758-dea9-4252-92bd-f8ff3cc5a742 FCA_VDR_ASO
+https://3.flexible-computing-advanced.orange-business.com/api/org/ca16043e-2ff1-4ca8-9edb-33568606668a FCA4_VDR_FST_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/cc93169b-6605-41ef-a63e-3b1d6ce6142e FCA4_VDR_PLZUA
+https://3.flexible-computing-advanced.orange-business.com/api/org/cca871cb-4547-446b-9311-741c5b8cc682 FCA4_VDR_DERS_DM
+https://3.flexible-computing-advanced.orange-business.com/api/org/ce772f5d-8386-472a-b352-454d83e56082 FCA_VDR_KHORGEST
+https://3.flexible-computing-advanced.orange-business.com/api/org/cefb4a32-2eb3-4736-8355-f65e7e286b04 FCA_VDR_STUDI...
+https://3.flexible-computing-advanced.orange-business.com/api/org/cf280117-c473-47a3-b523-bd49713e0b85 FCA_VDR_LOGTRANS
+https://3.flexible-computing-advanced.orange-business.com/api/org/d040b4bd-fa6c-4f6c-9523-2df906f7ac2e FCA_VDR_ASMIS
+https://3.flexible-computing-advanced.orange-business.com/api/org/d04e32dd-ec33-4011-849a-51ffbcc5d858 FCA4_VDR_DESIHP
+https://3.flexible-computing-advanced.orange-business.com/api/org/d1a08d84-7455-4c15-b189-a5ae48e5731a FCA_VDR_VALDE...
+https://3.flexible-computing-advanced.orange-business.com/api/org/d1f0af1f-eff7-46a7-a8f4-1a7a5c7bd88e FCA_VDR_OCB_L...
+https://3.flexible-computing-advanced.orange-business.com/api/org/d269cd6c-07f8-49d7-8e3d-3c773876671f FCATestOn
+https://3.flexible-computing-advanced.orange-business.com/api/org/d2a55471-0916-4b31-a17d-b09503c0f574 FCA_VDR_AUBUSSON
+https://3.flexible-computing-advanced.orange-business.com/api/org/d3de9289-78b8-453b-86ff-8a541fd31199 FCA_VDR_DEPANVIT
+https://3.flexible-computing-advanced.orange-business.com/api/org/d41327f9-3e23-4308-829f-f9c7b2c16f0f FCA4_VDR_OBS_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/d4acc2da-21b2-4f75-9010-243a91894c86 FCA4_VDR_OCBEDH
+https://3.flexible-computing-advanced.orange-business.com/api/org/d5b50d77-0c67-468f-9b54-6046f7d83737 FCA4_VDR_STAPLE
+https://3.flexible-computing-advanced.orange-business.com/api/org/d6fcd1f9-3382-4c58-8c67-d18458e596fb FCA4_VDR_OBS_BA
+https://3.flexible-computing-advanced.orange-business.com/api/org/d777b9d4-7f99-4f82-9942-c27cb4bcbf11 OCB_SHC_SA
+https://3.flexible-computing-advanced.orange-business.com/api/org/d845c518-d324-4c6c-a225-1f85bc967f0c FCA_VDR_SAVEN...
+https://3.flexible-computing-advanced.orange-business.com/api/org/d8e0b2ec-f191-45d7-863f-82ebb480a4a5 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/d8f1a6ec-b71e-4958-8a1f-8f5ed669d1ba FCA_VDR_CAMAIEU
+https://3.flexible-computing-advanced.orange-business.com/api/org/d8f94551-54aa-4492-9656-997b792e4bad FCA4_VDR_DESI...
+https://3.flexible-computing-advanced.orange-business.com/api/org/d9485016-13a9-43f1-bb59-2b2be78a8109 FCA4_VDR_DISU...
+https://3.flexible-computing-advanced.orange-business.com/api/org/db1feca4-84b6-45c6-9d66-3895d508d3e1 FCA_VDR_CPM_O...
+https://3.flexible-computing-advanced.orange-business.com/api/org/dc32c8ab-8a12-4f7c-849e-4a570af2cdc2 FCA_VDR_AUCHAN
+https://3.flexible-computing-advanced.orange-business.com/api/org/dc4409f7-6368-4d74-b96a-eca0beb117ea FCA_VDR_GERAN...
+https://3.flexible-computing-advanced.orange-business.com/api/org/dcb850a4-cdc6-4437-9c37-e4487fa433cf FCA_VDR_BIGARD
+https://3.flexible-computing-advanced.orange-business.com/api/org/dd14d49d-9768-4811-8b41-ee5d26d4ba19 FCA_VDR_NOKIARIP
+https://3.flexible-computing-advanced.orange-business.com/api/org/deb048cb-f01d-4717-b033-38216766c40b FCA4_VDR_IMT_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/df1ee902-3338-4274-8ae1-d3a007cce04e FCA_VDR_XYRIC
+https://3.flexible-computing-advanced.orange-business.com/api/org/df366bf8-0664-4623-9eea-dddadc14f9a8 FCA_VDR_MOBIL...
+https://3.flexible-computing-advanced.orange-business.com/api/org/e08b96ae-6810-4dba-8189-cf371e5ece40 FCA_VDR_IGESA
+https://3.flexible-computing-advanced.orange-business.com/api/org/e0aad92a-1eaa-43b6-b883-a140366e02a3 FCA_VDR_FCSGROUP
+https://3.flexible-computing-advanced.orange-business.com/api/org/e0dd846f-0332-4354-8d99-c3fb692f8c8a FCA_VDR_RESEA...
+https://3.flexible-computing-advanced.orange-business.com/api/org/e0f99927-be15-43b4-bd95-f71791854b15 FCA4_VDR_PCGAMES
+https://3.flexible-computing-advanced.orange-business.com/api/org/e1745e9d-05e9-40c7-b128-abc03cac7595 FCA_VDR_SOLUTEC
+https://3.flexible-computing-advanced.orange-business.com/api/org/e1e656d7-6d36-45bf-8da2-52a49de11906 FCA_VDR_FELLETIN
+https://3.flexible-computing-advanced.orange-business.com/api/org/e210b76e-391b-4602-b625-6d363ca82f41 FCA4_VDR_WEBS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/e4aa72e5-a325-40c3-9b02-43a287e0189e FCA_VDR_DASTRI
+https://3.flexible-computing-advanced.orange-business.com/api/org/e4c892b6-b6ae-4fc2-a80c-1823134d3bcb FCA4_VDR_DERS...
+https://3.flexible-computing-advanced.orange-business.com/api/org/e7dee4f1-1b56-4b19-b7aa-1f4c1245f48c FCE_CLOUDCOAC...
+https://3.flexible-computing-advanced.orange-business.com/api/org/e8509898-8f18-40df-a03e-5bff5cafaaf6 FCA_VDR_SAFAR
+https://3.flexible-computing-advanced.orange-business.com/api/org/e94f7f98-baf0-49e7-b740-4c731dee6dc3 FCA_VDR_EXAEGIS
+https://3.flexible-computing-advanced.orange-business.com/api/org/ea13a4ac-9bb2-465d-9569-1b5ca2dab176 FCA4_VDR_OVMAPS
+https://3.flexible-computing-advanced.orange-business.com/api/org/ea568217-0fb9-44ba-9163-67e018c0eb76 FCA4_VDR_RVC
+https://3.flexible-computing-advanced.orange-business.com/api/org/ec1d6659-7103-4ee1-acf4-7f0033bdf137 FCA_VDR_OBS_DMP
+https://3.flexible-computing-advanced.orange-business.com/api/org/ec6feed4-4d6f-4ae1-b98f-2ab6bf5e0728 FCA4_VDR_OCB_...
+https://3.flexible-computing-advanced.orange-business.com/api/org/ec726513-9308-4552-9653-13983bc536a1 FCA_VDR_OCBOE...
+https://3.flexible-computing-advanced.orange-business.com/api/org/ed2eb393-0145-468c-be31-250c8a73243b FCA_VDR_NORDNET
+https://3.flexible-computing-advanced.orange-business.com/api/org/ed8f99dd-dae6-4513-9601-82523006dd04 FCA_VDR_NOVAMEX
+https://3.flexible-computing-advanced.orange-business.com/api/org/ee280490-810f-469d-b6db-857dac2af379 FCA4_VDR_BETT...
+https://3.flexible-computing-advanced.orange-business.com/api/org/ee558434-9d93-4218-8d86-8497d5a72b58 FCA_VDR_COOPLR
+https://3.flexible-computing-advanced.orange-business.com/api/org/ef0bcd9b-9d64-4867-b7b1-2a7dd973dd1b FCA_OBS_ESC_STI
+https://3.flexible-computing-advanced.orange-business.com/api/org/ef1da800-3d9d-405b-9ec3-98fc8fa9562c FCA4_VDR_COMM...
+https://3.flexible-computing-advanced.orange-business.com/api/org/efbdf32e-58c2-4bf0-b27a-dd5b0dffc1f1 FCA4_VDR_FST-...
+https://3.flexible-computing-advanced.orange-business.com/api/org/f0c6a3f8-8d72-412a-bb94-b76db8af88e8 FCA_VDR_CERADEL
+https://3.flexible-computing-advanced.orange-business.com/api/org/f10d2696-a60e-42b6-ac0b-edee51b78395 FCA_VDR_GENEV...
+https://3.flexible-computing-advanced.orange-business.com/api/org/f17c746b-1ff9-4cb0-992a-1e26b43a1dc8 FCA_VDR_ISSONEO
+https://3.flexible-computing-advanced.orange-business.com/api/org/f18f743b-82eb-4fd0-b6eb-af79822d05e8 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/f2bd9254-deb0-4e20-9c0e-36c33b350906 FCA_VDR_DALLOZ
+https://3.flexible-computing-advanced.orange-business.com/api/org/f2ee7633-adf1-4237-924f-db31fa3bff03 FCA4_VDR_LICORNE
+https://3.flexible-computing-advanced.orange-business.com/api/org/f3d778ba-0e81-45b8-9c71-7d39de489a36 FCA_VDR_3DPLUS
+https://3.flexible-computing-advanced.orange-business.com/api/org/f3f5eb69-e1fe-4667-9cf9-4b47f30b1845 FCA_VDR_TERRE...
+https://3.flexible-computing-advanced.orange-business.com/api/org/f3fddc59-1bf1-473d-8eaf-984c140b1672 FCA4_VDR_SCEC...
+https://3.flexible-computing-advanced.orange-business.com/api/org/f441bf5c-f790-4f5e-a30e-88b44840e8b8 FCA_VDR_C2I
+https://3.flexible-computing-advanced.orange-business.com/api/org/f7269e92-0ee9-4c7c-ac80-e6e087f87f97 FCA4_VDR_BCMS
+https://3.flexible-computing-advanced.orange-business.com/api/org/f846ffbc-9078-4be2-8f3b-0ac6d09f28ff FCA4_VDR_CLW
+https://3.flexible-computing-advanced.orange-business.com/api/org/f895ace4-8948-4c7a-8d23-1987c337a750 FCA_VDR_CGPAC
+https://3.flexible-computing-advanced.orange-business.com/api/org/f917a1cd-aa21-44f8-a81a-3109e7697d5f FCA_VDR_DEL_FIJA
+https://3.flexible-computing-advanced.orange-business.com/api/org/f952aaf6-7e80-45c5-a233-077ae5a9c20d FCA4_VDR_OINI...
+https://3.flexible-computing-advanced.orange-business.com/api/org/f95e942e-49bc-437c-a211-df9d8185d3c6 FCA_VDR_DELATTRE
+https://3.flexible-computing-advanced.orange-business.com/api/org/f9825730-69cd-40df-8493-962b1f37205b FCA_VDR_EASYV...
+https://3.flexible-computing-advanced.orange-business.com/api/org/fa04d425-78e5-42de-a416-1eb0267e4352 FCA4_VDR_OLS-...
+https://3.flexible-computing-advanced.orange-business.com/api/org/fb9e46f4-6f7f-4a72-a3e8-8351f77198f2 FCA_VDR_GFI-PROD
+https://3.flexible-computing-advanced.orange-business.com/api/org/fc902a98-f0a6-462e-ae59-795c30676bf3 FCA4_VDR_IMTO...
+https://3.flexible-computing-advanced.orange-business.com/api/org/fca4d13e-20f6-4618-bfba-2884bc881205 FCA4_VDR_ITCORP
+https://3.flexible-computing-advanced.orange-business.com/api/org/fda72885-8809-445e-a170-706775305fa9 FCA4_VDR_FMS
+https://3.flexible-computing-advanced.orange-business.com/api/org/ff3a1673-0250-4054-88ed-be25bcd990f8 FCA_VDR_CHEM
+https://3.flexible-computing-advanced.orange-business.com/api/org/ffaaea39-1926-435f-bdd5-f4c77235feba FCA_VDR_ABIS
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> ($OrgList |where-object { $_.name -eq $OrgName}).href
+PS D:\Scripts\OCBOPS\fca-customer-creation> $OrgName
+PS D:\Scripts\OCBOPS\fca-customer-creation> $OrgName
+PS D:\Scripts\OCBOPS\fca-customer-creation> . .\Main.ps1
+10/31/2019 1:23:55 PM = LOGS directory already exist
+10/31/2019 1:23:55 PM [Main] : Script version: v1.0.1
+10/31/2019 1:23:55 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 1:23:55 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 1:23:55 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 1:23:55 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 1:23:55 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 1:23:55 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 1:23:55 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 1:23:55 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+10/31/2019 1:23:55 PM [Main] : Site Name  FCA_VDR
+10/31/2019 1:23:55 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 1:23:55 PM [PESG] : Script version: v1.0.1
+10/31/2019 1:23:55 PM [PESG] : ImportModel PowerNSX
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+10/31/2019 1:23:55 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:23:56 PM [PESG] : PowerCli connected to vCenter
+10/31/2019 1:23:56 PM [PESG] : PowerNSX connection to the NSX manager
+Using existing PowerCLI connection to 10.19.249.9
+
+Version             : 6.3.6
+BuildNumber         : 8085122
+Credential          : System.Management.Automation.PSCredential
+Server              : 10.19.249.20
+Port                : 443
+Protocol            : https
+ValidateCertificate : False
+VIConnection        : 10.19.249.9
+DebugLogging        : False
+DebugLogfile        : C:\Users\EREEN~1.THA\AppData\Local\Temp\16\PowerNSXLog-admin@10.19.249.20-2019_10_31_13_23_56.log
+
+10/31/2019 1:23:56 PM [PESG] : PowerNSX connected to the NSX manager
+10/31/2019 1:24:16 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1
+10/31/2019 1:24:21 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1; vdnId=16518}
+10/31/2019 1:24:21 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_ADMIN_PESG_U_S1
+10/31/2019 1:24:21 PM [PESG] : Preparing Interface Uplink setting : 100.64.103.67 / 24
+10/31/2019 1:24:21 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_ADMIN_vCDESG_T_S1
+10/31/2019 1:24:21 PM [PESG] : Preparing Interface Internal setting : 192.168.5.14 / 28
+10/31/2019 1:24:21 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_ADMIN_S1
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+>> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-NsxWebRequest): "Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Failed to power on VM 403601037-1.</details><errorCode>1502</errorCode><rootCauseString>No compatible host has sufficient resources to satisfy the reservation.</rootCauseString><moduleName>core-services</moduleName></error>"
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Get-NsxEdge): "Cannot bind argument to parameter 'objectId' because it is an empty string."
+10/31/2019 1:25:30 PM [PESG] : PESG creation failed, waiting 2 Mins for the next retry TryNumber 1
+10/31/2019 1:28:38 PM [PESG] : Renaming PESG
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+>> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-NsxWebRequest): "Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>"
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : 
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant 
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], 
+InternalNsxApiException
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request :
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], InternalNsxApiExcep
+   tion
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+
+10/31/2019 1:28:39 PM [PESG] : PESG ID : edge-3228
+10/31/2019 1:28:39 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:28:39 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:28:39 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:28:39 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:28:39 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:28:39 PM [PESG] : UplinkNetwork	 	System.Xml.XmlElement
+10/31/2019 1:28:39 PM [PESG] : NsxTransportZone	Transit-TZ
+10/31/2019 1:28:39 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3228/routing/config
+10/31/2019 1:29:01 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_ULS_INET_vCDESG_T_S1
+10/31/2019 1:29:06 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_ULS_INET_vCDESG_T_S1; vdnId=20246}
+10/31/2019 1:29:06 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_INET_PESG_U_S1
+10/31/2019 1:29:06 PM [PESG] : Preparing Interface Uplink setting : 100.64.1.167 / 24
+10/31/2019 1:29:06 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_INET_vCDESG_T_S1
+10/31/2019 1:29:06 PM [PESG] : Preparing Interface Internal setting : 100.64.102.254 / 24
+10/31/2019 1:29:06 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_INET_S1
+10/31/2019 1:29:59 PM [PESG] : Renaming PESG
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+>> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-NsxWebRequest): "Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>"
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : 
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant 
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], 
+InternalNsxApiException
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request :
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], InternalNsxApiExcep
+   tion
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+
+10/31/2019 1:29:59 PM [PESG] : PESG ID : edge-3229
+10/31/2019 1:29:59 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:29:59 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:29:59 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:29:59 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:29:59 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:29:59 PM [PESG] : UplinkNetwork	 	INET-CUST-ACCESS-S1
+10/31/2019 1:29:59 PM [PESG] : NsxTransportZone	Transit-UTZ
+10/31/2019 1:29:59 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3229/routing/config
+10/31/2019 1:30:14 PM [Main]
+10/31/2019 1:30:14 PM [ExtNetwork] : Script version: v1.0.1
+10/31/2019 1:30:14 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:30:15 PM [ExtNetwork] : PowerCli connected to vCenter
+10/31/2019 1:30:15 PM [ExtNetwork] : The Site FCA_VDR is selected
+10/31/2019 1:30:15 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+10/31/2019 1:30:15 PM [ExtNetwork] : The API Version 27.0 is selected
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Add-Type): "Cannot add type. The type name 'TrustAllCertsPolicy' already exists."
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+
+10/31/2019 1:30:15 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+10/31/2019 1:30:16 PM [ExtNetwork] : User FCA_SE@system authenticated
+10/31/2019 1:30:16 PM [ExtNetwork] : Get Org List
+10/31/2019 1:30:16 PM [ExtNetwork] : Org already exist :FCA_VDR_Automation
+10/31/2019 1:30:16 PM [ExtNetwork] : Get existing one :FCA_VDR_Automation
+10/31/2019 1:30:16 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\UserTemplate.xml
+10/31/2019 1:30:16 PM [ExtNetwork] : Creating New User :System.Xml.XmlElement.Name
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (403) Forbidden.
+10/31/2019 1:30:16 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\UserTemplate.xml
+10/31/2019 1:30:16 PM [ExtNetwork] : Creating New User :System.Xml.XmlElement.Name
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (403) Forbidden."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (403) Forbidden.
+10/31/2019 1:30:16 PM [ExtNetwork] : Get Existing OrgVDC List
+10/31/2019 1:30:16 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCTemplate.xml
+10/31/2019 1:30:16 PM [ExtNetwork] : Get PVDCs List
+10/31/2019 1:30:23 PM [ExtNetwork] : Get PVDC Info : PVDCNUVDRVCAN01
+10/31/2019 1:30:46 PM [ExtNetwork] : Creating OrgVDC :OrgVDC1
+10/31/2019 1:30:47 PM [ExtNetwork] : Task submitted successfully, waiting for result
+10/31/2019 1:30:47 PM [ExtNetwork] : queued
+10/31/2019 1:30:52 PM [ExtNetwork] : Task running
+10/31/2019 1:30:57 PM [ExtNetwork] : Task running
+10/31/2019 1:31:02 PM [ExtNetwork] : Task completed successfully
+True
+10/31/2019 1:31:02 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCTemplate.xml
+10/31/2019 1:31:02 PM [ExtNetwork] : Get PVDCs List
+10/31/2019 1:31:08 PM [ExtNetwork] : Get PVDC Info : PVDCNUVDRVCAN01
+10/31/2019 1:31:31 PM [ExtNetwork] : Creating OrgVDC :OrgVDC2
+10/31/2019 1:31:32 PM [ExtNetwork] : Task submitted successfully, waiting for result
+10/31/2019 1:31:32 PM [ExtNetwork] : queued
+10/31/2019 1:31:37 PM [ExtNetwork] : Task running
+10/31/2019 1:31:42 PM [ExtNetwork] : Task running
+10/31/2019 1:31:47 PM [ExtNetwork] : Task running
+10/31/2019 1:31:52 PM [ExtNetwork] : Task running
+10/31/2019 1:31:57 PM [ExtNetwork] : Task completed successfully
+True
+10/31/2019 1:31:57 PM [Main]
+Transcript stopped, output file is D:\Scripts\OCBOPS\fca-customer-creation\Logs\20191031.012355_FCASECustomerCreation.log
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> . .\Main.ps1
+10/31/2019 1:59:34 PM = LOGS directory already exist
+10/31/2019 1:59:34 PM [Main] : Script version: v1.0.1
+10/31/2019 1:59:34 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 1:59:34 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 1:59:34 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 1:59:34 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 1:59:34 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 1:59:34 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 1:59:34 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 1:59:34 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE - Copy.xml
+Cannot convert value "System.Object[]" to type "System.Xml.XmlDocument". Error: "The 'networktype' start tag on line 30 
+position 7 does not match the end tag of 'nteworktype'. Line 30, position 25."
+At D:\Scripts\OCBOPS\fca-customer-creation\Main.ps1:114 char:2
++     $Customer = [Xml] (Get-Content $CustomerLocation  -ErrorVariable  ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvalidCastToXmlDocument
+Cannot convert value "System.Object[]" to type "System.Xml.XmlDocument". Error: "The 'networktype' start tag on line
+30 position 7 does not match the end tag of 'nteworktype'. Line 30, position 25."
+At D:\Scripts\OCBOPS\fca-customer-creation\Main.ps1:114 char:2
++     $Customer = [Xml] (Get-Content $CustomerLocation  -ErrorVariable  ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvalidCastToXmlDocument
+
+10/31/2019 1:59:35 PM [Main] : Site Name  FCA_VDR
+10/31/2019 1:59:35 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 1:59:35 PM [PESG] : Script version: v1.0.1
+10/31/2019 1:59:35 PM [PESG] : ImportModel PowerNSX
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+10/31/2019 1:59:35 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:59:36 PM [PESG] : PowerCli connected to vCenter
+10/31/2019 1:59:36 PM [PESG] : PowerNSX connection to the NSX manager
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList= $Customer.customer.OrgVDCs.OrgVDC.Edges
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList
+PS D:\Scripts\OCBOPS\fca-customer-creation> $CustomerFile
+FCA_SE_CUST_TEMPLATE - Copy.xml
+PS D:\Scripts\OCBOPS\fca-customer-creation> $CustomerLocation
+D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE - Copy.xml
+PS D:\Scripts\OCBOPS\fca-customer-creation> $Customer = [Xml] (Get-Content $CustomerLocation  -ErrorVariable ProcessError -ErrorAction SilentlyContinue) 
+Cannot convert value "System.Object[]" to type "System.Xml.XmlDocument". Error: "The 'networktype' start tag on line 30 
+position 7 does not match the end tag of 'nteworktype'. Line 30, position 25."
+At line:1 char:1
++ $Customer = [Xml] (Get-Content $CustomerLocation  -ErrorVariable Proc ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvalidCastToXmlDocument
+Cannot convert value "System.Object[]" to type "System.Xml.XmlDocument". Error: "The 'networktype' start tag on line
+30 position 7 does not match the end tag of 'nteworktype'. Line 30, position 25."
+At line:1 char:1
++ $Customer = [Xml] (Get-Content $CustomerLocation  -ErrorVariable Proc ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvalidCastToXmlDocument
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(TabExpansion2): "Cannot bind argument to parameter 'inputScript' because it is an empty string."
+PS D:\Scripts\OCBOPS\fca-customer-creation> if ($ProcessError){
+Write-Host (Get-Date).ToString() "$ScriptIdentifier : Error Importing customer file  $CustomerLocation" -ForegroundColor Red
+Exit-function
+}
+PS D:\Scripts\OCBOPS\fca-customer-creation> $Customer
+
+customer
+--------
+customer
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $Customer = [Xml] (Get-Content $CustomerLocation  -ErrorVariable ProcessError -ErrorAction SilentlyContinue) 
+PS D:\Scripts\OCBOPS\fca-customer-creation> $CustomerLocation = $WorkingDirectory+'Customers-info\' + $CustomerFile
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(TabExpansion2): "Cannot bind argument to parameter 'inputScript' because it is an empty string."
+PS D:\Scripts\OCBOPS\fca-customer-creation> Write-Host (Get-Date).ToString() "$ScriptIdentifier : Import customer file $CustomerLocation" -ForegroundColor Green
+10/31/2019 2:04:42 PM [PESG] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE - Copy.xml
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(TabExpansion2): "Cannot bind argument to parameter 'inputScript' because it is an empty string."
+PS D:\Scripts\OCBOPS\fca-customer-creation> $Customer = [Xml] (Get-Content $CustomerLocation  -ErrorVariable ProcessError -ErrorAction SilentlyContinue) 
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(TabExpansion2): "Cannot bind argument to parameter 'inputScript' because it is an empty string."
+PS D:\Scripts\OCBOPS\fca-customer-creation> if ($ProcessError){
+Write-Host (Get-Date).ToString() "$ScriptIdentifier : Error Importing customer file  $CustomerLocation" -ForegroundColor Red
+Exit-function
+}
+PS D:\Scripts\OCBOPS\fca-customer-creation> $Customer
+
+customer
+--------
+customer
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $Customer.OuterXml
+<customer><site>FCA_VDR</site><OrgName>FCA_VDR_Automation</OrgName><FullName>Automation Full Name</FullName><Tenant>Tenant01</Tenant><Description>Description</Description><OrgVDCs><OrgVDC><name>OrgVDC1</name><ProviderVDC>PVDCNUVDRVCAN01</ProviderVDC><AllocationModel>AllocationPool</AllocationModel><StorageProfile><name>SILVER</name><Limit>120</Limit></StorageProfile><cpu><Limit>50</Limit><Guaranteed>30</Guaranteed><Speed>2.0</Speed></cpu><Memory><Limit>48</Limit><Guaranteed>50</Guaranteed></Memory><NetoworkDigram>Stander/Mutli</NetoworkDigram><Description>OrgVDC Description</Description><Edges><Edge><name>VSE-INET</name><networktype>INET</networktype></Edge><Edge><name>VSE_ADMIN</name><networktype>ADMIN</networktype></Edge></Edges></OrgVDC><OrgVDC><name>OrgVDC2</name><ProviderVDC>PVDCNUVDRVCAN01</ProviderVDC><AllocationModel>AllocationPool</AllocationModel><StorageProfile><name>SILVER</name><Limit>150</Limit></StorageProfile><cpu><Limit>20</Limit><Guaranteed>30</Guaranteed><Speed>2.0</Speed></cpu><Memory><Limit>48</Limit><Guaranteed>50</Guaranteed></Memory><NetoworkDigram>Stander/Mutli</NetoworkDigram><Description>OrgVDC Description</Description></OrgVDC></OrgVDCs><Users><User><Name>User01</Name><FullName>user1</FullName><EmailAddress>email1@test.local</EmailAddress><Telephone>01</Telephone><Password>PA@sswordSS2</Password><UserType>Local</UserType></User><User><Name>User02</Name><FullName>user2</FullName><EmailAddress>email2@test.local</EmailAddress><Telephone>02</Telephone><Password>PA@sswordSS2</Password><UserType>Local</UserType></User></Users></customer>
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList= $Customer.customer.OrgVDCs.OrgVDC.Edges
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList
+
+Edge
+----
+{VSE-INET, VSE_ADMIN}
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList.count()
+Method invocation failed because [System.Xml.XmlElement] does not contain a method named 'count'.
+At line:1 char:1
++ $EdgeList.count()
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (count:String) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+Method invocation failed because [System.Xml.XmlElement] does not contain a method named 'count'.
+At line:1 char:1
++ $EdgeList.count()
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (count:String) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList.Count
+2
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList.Edge
+
+name      networktype
+----      -----------
+VSE-INET  INET
+VSE_ADMIN ADMIN
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList.Edge.name
+VSE-INET
+VSE_ADMIN
+PS D:\Scripts\OCBOPS\fca-customer-creation> $vcdHost=$Customizations.VCD.vcdHost
+PS D:\Scripts\OCBOPS\fca-customer-creation> $vcdHost
+api-3.flexible-computing-advanced.orange-business.com
+PS D:\Scripts\OCBOPS\fca-customer-creation> $baseurl = "https://$vcdHost/api"
+PS D:\Scripts\OCBOPS\fca-customer-creation> $baseurl
+https://api-3.flexible-computing-advanced.orange-business.com/api
+PS D:\Scripts\OCBOPS\fca-customer-creation> $ExtnetworksURL = $baseurl + "/admin/extension/externalNetworkReferences"
+PS D:\Scripts\OCBOPS\fca-customer-creation> $ExtnetworksURL
+https://api-3.flexible-computing-advanced.orange-business.com/api/admin/extension/externalNetworkReferences
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks=Invoke-RestMethod -Uri $ExtnetworksURL -Headers $headers -Method GET
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks
+
+xml                                             VMWExternalNetworkReferences
+---                                             ----------------------------
+version="1.0" encoding="UTF-8" standalone="yes" VMWExternalNetworkReferences
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExtNetName =$OrgName+$Customizations.AdminVCD.ExtNetName
+PS D:\Scripts\OCBOPS\fca-customer-creation>  $AdminExtNetName
+FCA_VDR_Automation_ADMIN_INTERCO_vCDESG_S1
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExternalNetwork = $responseExtnetworks.VMWExternalNetworkReferences.ExternalNetworkReference  | where {$_.Name -eq  $AdminExtNetName }
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExternalNetwork
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExtNetName = "FCA_VDR_ABIS_ULS_INET_vCDESG_T_S1"
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExternalNetwork = $responseExtnetworks.VMWExternalNetworkReferences.ExternalNetworkReference  | where {$_.Name -eq  $AdminExtNetName }
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExternalNetwork
+
+href
+----
+https://3.flexible-computing-advanced.orange-business.com/api/admin/extension/externalnet/8fa58799-78f9-45e1-b1c3-e5...
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExternalNetwork.href
+https://3.flexible-computing-advanced.orange-business.com/api/admin/extension/externalnet/8fa58799-78f9-45e1-b1c3-e5c6f07c6878
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExternalNetwork.href
+https://3.flexible-computing-advanced.orange-business.com/api/admin/extension/externalnet/8fa58799-78f9-45e1-b1c3-e5c6f07c6878
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks=Invoke-RestMethod -Uri $AdminExternalNetwork.href  -Headers $headers -Method GET
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks
+
+xml                                             VMWExternalNetwork
+---                                             ------------------
+version="1.0" encoding="UTF-8" standalone="yes" VMWExternalNetwork
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks.VMWExternalNetwork
+
+
+xmlns           : http://www.vmware.com/vcloud/v1.5
+vmext           : http://www.vmware.com/vcloud/extension/v1.5
+ovf             : http://schemas.dmtf.org/ovf/envelope/1
+vssd            : http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData
+common          : http://schemas.dmtf.org/wbem/wscim/1/common
+rasd            : http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData
+vmw             : http://www.vmware.com/schema/ovf
+ovfenv          : http://schemas.dmtf.org/ovf/environment/1
+ns9             : http://www.vmware.com/vcloud/versions
+name            : FCA_VDR_ABIS_ULS_INET_vCDESG_T_S1
+id              : urn:vcloud:network:8fa58799-78f9-45e1-b1c3-e5c6f07c6878
+href            : https://3.flexible-computing-advanced.orange-business.com/api/admin/extension/externalnet/8fa58799-78
+                  f9-45e1-b1c3-e5c6f07c6878
+type            : application/vnd.vmware.admin.vmwexternalnet+xml
+Link            : {Link, Link, Link, Link...}
+Description     :
+Configuration   : Configuration
+VimPortGroupRef : VimPortGroupRef
+
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks.VMWExternalNetwork.Configuration
+
+IpScopes FenceMode RetainNetInfoAcrossDeployments
+-------- --------- ------------------------------
+IpScopes isolated  false
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks.VMWExternalNetwork.Configuration.IpScopes
+
+IpScope
+-------
+IpScope
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseExtnetworks.VMWExternalNetwork.Configuration.IpScopes.IpScope
+
+
+IsInherited          : false
+Gateway              : 100.64.124.254
+Netmask              : 255.255.255.0
+SubnetPrefixLength   : 24
+IsEnabled            : true
+IpRanges             : IpRanges
+AllocatedIpAddresses : AllocatedIpAddresses
+SubAllocations       : SubAllocations
+
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList= $Customer.customer.OrgVDCs.OrgVDC.Edges
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList
+
+Edge
+----
+{VSE-INET, VSE_ADMIN}
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList[0]
+
+Edge
+----
+{VSE-INET, VSE_ADMIN}
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList[0].Edge
+
+name      networktype
+----      -----------
+VSE-INET  INET
+VSE_ADMIN ADMIN
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList[0].Edge.Name
+VSE-INET
+VSE_ADMIN
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList.Edge[0].Name
+VSE-INET
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList= $Customer.customer.OrgVDCs.OrgVDC.Edges
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList
+
+Edge
+----
+{VSE-INET, VSE_ADMIN}
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList[0]
+
+Edge
+----
+{VSE-INET, VSE_ADMIN}
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgeList[0]$EdgesList= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$EdgesList= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$EdgesList= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge
+At line:1 char:13
++ $EdgeList[0]$EdgesList= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$ ...
++             ~~~~~~~~~~~
+Unexpected token '$EdgesList=' in expression or statement.
+
+At line:1 char:69
++ ... List= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$EdgesList= $Custom ...
++                                                       ~~~~~~~~~~~
+Unexpected token '$EdgesList=' in expression or statement.
+
+At line:1 char:125
++ ... List= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$EdgesList= $Custom ...
++                                                       ~~~~~~~~~~~
+Unexpected token '$EdgesList=' in expression or statement.
+At line:1 char:13
++ $EdgeList[0]$EdgesList= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$ ...
++             ~~~~~~~~~~~
+Unexpected token '$EdgesList=' in expression or statement.
+
+At line:1 char:69
++ ... List= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$EdgesList= $Custom ...
++                                                       ~~~~~~~~~~~
+Unexpected token '$EdgesList=' in expression or statement.
+
+At line:1 char:125
++ ... List= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge$EdgesList= $Custom ...
++                                                       ~~~~~~~~~~~
+Unexpected token '$EdgesList=' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgesList= $Customer.customer.OrgVDCs.OrgVDC.Edges.Edge
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgesList
+
+name      networktype
+----      -----------
+VSE-INET  INET
+VSE_ADMIN ADMIN
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgesList[0]
+
+name     networktype
+----     -----------
+VSE-INET INET
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $EdgesList[0].name
+VSE-INET
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseOrgVDC.AdminVDC.Tasks.Task.href
+https://3.flexible-computing-advanced.orange-business.com/api/task/9517592a-e555-40fc-8d7f-b304008d53ae
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseOrgVDC.AdminVDC
+
+
+xmlns                    : http://www.vmware.com/vcloud/v1.5
+ovf                      : http://schemas.dmtf.org/ovf/envelope/1
+vssd                     : http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData
+common                   : http://schemas.dmtf.org/wbem/wscim/1/common
+rasd                     : http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData
+vmw                      : http://www.vmware.com/schema/ovf
+ovfenv                   : http://schemas.dmtf.org/ovf/environment/1
+vmext                    : http://www.vmware.com/vcloud/extension/v1.5
+ns9                      : http://www.vmware.com/vcloud/versions
+status                   : 0
+name                     : OrgVDC2
+id                       : urn:vcloud:vdc:735a9079-3fc2-41b5-95d1-89f0d52d9d3f
+href                     : https://3.flexible-computing-advanced.orange-business.com/api/admin/vdc/735a9079-3fc2-41b5-9
+                           5d1-89f0d52d9d3f
+type                     : application/vnd.vmware.admin.vdc+xml
+Link                     : {Link, Link, Link, Link...}
+Description              : OrgVDC2
+Tasks                    : Tasks
+AllocationModel          : AllocationPool
+ComputeCapacity          : ComputeCapacity
+ResourceEntities         :
+AvailableNetworks        :
+Capabilities             : Capabilities
+NicQuota                 : 0
+NetworkQuota             : 100
+UsedNetworkCount         : 0
+VmQuota                  : 0
+IsEnabled                : false
+VdcStorageProfiles       :
+VCpuInMhz2               : 2000
+ResourceGuaranteedMemory : 0.5
+ResourceGuaranteedCpu    : 0.3
+VCpuInMhz                : 2000
+IsThinProvision          : true
+VendorServices           :
+ProviderVdcReference     : ProviderVdcReference
+UsesFastProvisioning     : false
+
+
+
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseOrgVDC.AdminVDC.href
+https://3.flexible-computing-advanced.orange-business.com/api/admin/vdc/735a9079-3fc2-41b5-95d1-89f0d52d9d3f
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseOrgVDC.AdminVDC.id
+urn:vcloud:vdc:735a9079-3fc2-41b5-95d1-89f0d52d9d3f
+PS D:\Scripts\OCBOPS\fca-customer-creation> $responseOrgVDC.AdminVDC.id
+urn:vcloud:vdc:735a9079-3fc2-41b5-95d1-89f0d52d9d3f
+PS D:\Scripts\OCBOPS\fca-customer-creation> $AdminExternalNetwork.name
+FCA_VDR_ABIS_ULS_INET_vCDESG_T_S1

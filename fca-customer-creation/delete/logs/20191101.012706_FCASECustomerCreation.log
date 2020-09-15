@@ -1,0 +1,109 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20191101132706
+Username: OCPINFRA\ereen.thabet
+RunAs User: OCPINFRA\ereen.thabet
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 34728
+PSVersion: 5.1.14409.1018
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1018
+BuildVersion: 10.0.14409.1018
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+11/1/2019 1:27:06 PM [Main] : Script version: v1.0.1
+11/1/2019 1:27:06 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+11/1/2019 1:27:06 PM [Main] : ImportModule Debug-Functions.ps1
+11/1/2019 1:27:06 PM [Main] : ImportModule Exit-function.ps1
+11/1/2019 1:27:06 PM [Main] : ImportModule Get-Inifile.ps1
+11/1/2019 1:27:06 PM [Main] : ImportModule Get-ScriptVersion.ps1
+11/1/2019 1:27:06 PM [Main] : ImportModule NSX-Functions.ps1
+11/1/2019 1:27:06 PM [Main] : ImportModule VCD-functions.ps1
+11/1/2019 1:27:06 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE2.xml
+11/1/2019 1:27:06 PM [Main] : Site Name  FCA_VDR
+11/1/2019 1:27:06 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+11/1/2019 1:27:06 PM [PESG] : Script version: v1.0.1
+11/1/2019 1:27:06 PM [PESG] : ImportModel PowerNSX
+WARNING: The generated type defines no public methods or properties.
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+11/1/2019 1:27:11 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+11/1/2019 1:27:12 PM [PESG] : PowerCli connected to vCenter
+11/1/2019 1:27:12 PM [PESG] : PowerNSX connection to the NSX manager
+Using existing PowerCLI connection to 10.19.249.9
+
+Version             : 6.3.6
+BuildNumber         : 8085122
+Credential          : System.Management.Automation.PSCredential
+Server              : 10.19.249.20
+Port                : 443
+Protocol            : https
+ValidateCertificate : False
+VIConnection        : 10.19.249.9
+DebugLogging        : False
+DebugLogfile        : C:\Users\EREEN~1.THA\AppData\Local\Temp\16\PowerNSXLog-admin@10.19.249.20-2019_11_01_13_27_13.log
+
+11/1/2019 1:27:14 PM [PESG] : PowerNSX connected to the NSX manager
+11/1/2019 1:27:39 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_Test_LS_ADMIN_vCDESG_T_S1
+11/1/2019 1:27:47 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_Test_LS_ADMIN_vCDESG_T_S1; vdnId=16016}
+11/1/2019 1:27:47 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_Test_ADMIN_PESG_U_S1
+11/1/2019 1:27:47 PM [PESG] : Preparing Interface Uplink setting : 100.64.103.67 / 24
+11/1/2019 1:27:47 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_Test_ADMIN_vCDESG_T_S1
+11/1/2019 1:27:47 PM [PESG] : Preparing Interface Internal setting : 192.168.5.14 / 28
+11/1/2019 1:27:47 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_Test_PESG_ADMIN_S1
+11/1/2019 1:28:51 PM [PESG] : Renaming PESG
+11/1/2019 1:29:07 PM [PESG] : PESG ID : edge-3237
+11/1/2019 1:29:07 PM [PESG] : -------------appliancesSummary----------------
+11/1/2019 1:29:07 PM [PESG] : Tenant		 	Tenant01
+11/1/2019 1:29:07 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+11/1/2019 1:29:07 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+11/1/2019 1:29:07 PM [PESG] : EdgeFolder	 	NSX Edges
+11/1/2019 1:29:07 PM [PESG] : UplinkNetwork	 	System.Xml.XmlElement
+11/1/2019 1:29:07 PM [PESG] : NsxTransportZone	Transit-TZ
+11/1/2019 1:29:07 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3237/routing/config
+11/1/2019 1:29:23 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_Test_ULS_INET_vCDESG_T_S1
+11/1/2019 1:29:29 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_Test_ULS_INET_vCDESG_T_S1; vdnId=20244}
+11/1/2019 1:29:29 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_Test_INET_PESG_U_S1
+11/1/2019 1:29:29 PM [PESG] : Preparing Interface Uplink setting : 100.64.1.167 / 24
+11/1/2019 1:29:29 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_Test_INET_vCDESG_T_S1
+11/1/2019 1:29:29 PM [PESG] : Preparing Interface Internal setting : 100.64.102.254 / 24
+11/1/2019 1:29:29 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_Test_PESG_INET_S1
+11/1/2019 1:30:47 PM [PESG] : Renaming PESG
+11/1/2019 1:31:02 PM [PESG] : PESG ID : edge-3238
+11/1/2019 1:31:02 PM [PESG] : -------------appliancesSummary----------------
+11/1/2019 1:31:02 PM [PESG] : Tenant		 	Tenant01
+11/1/2019 1:31:02 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+11/1/2019 1:31:02 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+11/1/2019 1:31:02 PM [PESG] : EdgeFolder	 	NSX Edges
+11/1/2019 1:31:02 PM [PESG] : UplinkNetwork	 	INET-CUST-ACCESS-S1
+11/1/2019 1:31:02 PM [PESG] : NsxTransportZone	Transit-UTZ
+11/1/2019 1:31:02 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3238/routing/config
+11/1/2019 1:31:08 PM [Main]
+11/1/2019 1:31:08 PM [ExtNetwork] : Script version: v1.0.1
+11/1/2019 1:31:08 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+11/1/2019 1:31:09 PM [ExtNetwork] : PowerCli connected to vCenter
+11/1/2019 1:31:09 PM [ExtNetwork] : The Site FCA_VDR is selected
+11/1/2019 1:31:09 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+11/1/2019 1:31:09 PM [ExtNetwork] : The API Version 27.0 is selected
+11/1/2019 1:31:09 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+11/1/2019 1:31:10 PM [ExtNetwork] : User FCA_SE@system authenticated
+11/1/2019 1:32:18 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\ExternalNetwork.xml
+11/1/2019 1:32:21 PM [ExtNetwork] : Updating XML ADMIN External Network file
+11/1/2019 1:32:21 PM [ExtNetwork] : Creating Admin External Network :FCA_VDR_Automation_Test_ADMIN_INTERCO_vCDESG_S1
+11/1/2019 1:32:21 PM [ExtNetwork] : Creating External Network :192.168.5.14 / 255.255.255.240
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+11/1/2019 1:32:21 PM [ExtNetwork] : Script Terminated
+11/1/2019 1:32:21 PM [Main]
+**********************
+Windows PowerShell transcript end
+End time: 20191101133221
+**********************

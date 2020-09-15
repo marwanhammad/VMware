@@ -1,0 +1,38 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190227211627
+Username: EQ1ADM\mhammad.DCO
+RunAs User: EQ1ADM\mhammad.DCO
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 4588
+PSVersion: 5.1.14409.1012
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1012
+BuildVersion: 10.0.14409.1012
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Logs\20190227.091627_Enabling .txt
+2/27/2019 9:16:27 PM = PowerCli connection to vCenter
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   EQ1ADM\mhammad.DCO
+2/27/2019 9:16:44 PM = PowerCli connected to vCenter
+2/27/2019 9:16:44 PM = Script version = 2019.01.27
+2/27/2019 9:16:44 PM = Selected VM: LABESX02 (86b66aee-12a0-4f76-ba2e-9f4c07308486)
+2/27/2019 9:16:46 PM = Update CBT for VM: LABESX02 (86b66aee-12a0-4f76-ba2e-9f4c07308486)
+2/27/2019 9:16:56 PM = Take new Snapshot
+2/27/2019 9:17:23 PM = Remove Snapshot
+2/27/2019 9:17:43 PM = Selected VM: LABESX03 (84e55dc3-285d-4b98-9934-3480b3d1687b)
+2/27/2019 9:17:45 PM = Update CBT for VM: LABESX03 (84e55dc3-285d-4b98-9934-3480b3d1687b)
+2/27/2019 9:18:17 PM = Take new Snapshot
+2/27/2019 9:21:02 PM = Remove Snapshot
+2/27/2019 9:22:56 PM = PowerCli Disconnected from vCenter
+**********************
+Windows PowerShell transcript end
+End time: 20190227212256
+**********************

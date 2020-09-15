@@ -1,0 +1,171 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20191031131809
+Username: OCPINFRA\ereen.thabet
+RunAs User: OCPINFRA\ereen.thabet
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 10628
+PSVersion: 5.1.14409.1018
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1018
+BuildVersion: 10.0.14409.1018
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+10/31/2019 1:18:09 PM [Main] : Script version: v1.0.1
+10/31/2019 1:18:09 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Debug-Functions.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Exit-function.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Get-Inifile.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule Get-ScriptVersion.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule NSX-Functions.ps1
+10/31/2019 1:18:09 PM [Main] : ImportModule VCD-functions.ps1
+10/31/2019 1:18:09 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+10/31/2019 1:18:09 PM [Main] : Site Name  FCA_VDR
+10/31/2019 1:18:09 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+10/31/2019 1:18:09 PM [PESG] : Script version: v1.0.1
+10/31/2019 1:18:09 PM [PESG] : ImportModel PowerNSX
+WARNING: The names of some imported commands from the module 'PowerNSX' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+10/31/2019 1:18:09 PM [PESG] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:18:10 PM [PESG] : PowerCli connected to vCenter
+10/31/2019 1:18:10 PM [PESG] : PowerNSX connection to the NSX manager
+Using existing PowerCLI connection to 10.19.249.9
+
+Version             : 6.3.6
+BuildNumber         : 8085122
+Credential          : System.Management.Automation.PSCredential
+Server              : 10.19.249.20
+Port                : 443
+Protocol            : https
+ValidateCertificate : False
+VIConnection        : 10.19.249.9
+DebugLogging        : False
+DebugLogfile        : C:\Users\EREEN~1.THA\AppData\Local\Temp\16\PowerNSXLog-admin@10.19.249.20-2019_10_31_13_18_10.log
+
+10/31/2019 1:18:11 PM [PESG] : PowerNSX connected to the NSX manager
+10/31/2019 1:18:30 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1
+10/31/2019 1:18:35 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_LS_ADMIN_vCDESG_T_S1; vdnId=16274}
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_ADMIN_PESG_U_S1
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Uplink setting : 100.64.103.67 / 24
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_ADMIN_vCDESG_T_S1
+10/31/2019 1:18:35 PM [PESG] : Preparing Interface Internal setting : 192.168.5.14 / 28
+10/31/2019 1:18:35 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_ADMIN_S1
+10/31/2019 1:19:39 PM [PESG] : Renaming PESG
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+>> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-NsxWebRequest): "Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>"
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : 
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant 
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], 
+InternalNsxApiException
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request :
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_ADMIN_S1 already exists for tenant
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], InternalNsxApiExcep
+   tion
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+
+10/31/2019 1:19:39 PM [PESG] : PESG ID : edge-3225
+10/31/2019 1:19:39 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:19:39 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:19:39 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:19:39 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:19:39 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:19:39 PM [PESG] : UplinkNetwork	 	System.Xml.XmlElement
+10/31/2019 1:19:39 PM [PESG] : NsxTransportZone	Transit-TZ
+10/31/2019 1:19:39 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3225/routing/config
+10/31/2019 1:20:01 PM [PESG] : Creating Logical Switche : FCA_VDR_Automation_ULS_INET_vCDESG_T_S1
+10/31/2019 1:20:06 PM [PESG] : Logical Switche ID : @{name=FCA_VDR_Automation_ULS_INET_vCDESG_T_S1; vdnId=20245}
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Uplink setting : FCA_VDR_Automation_INET_PESG_U_S1
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Uplink setting : 100.64.1.167 / 24
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Internal setting : FCA_VDR_Automation_INET_vCDESG_T_S1
+10/31/2019 1:20:06 PM [PESG] : Preparing Interface Internal setting : 100.64.102.254 / 24
+10/31/2019 1:20:06 PM [PESG] : Creating Provider Edges : FCA_VDR_Automation_PESG_INET_S1
+10/31/2019 1:21:11 PM [PESG] : Renaming PESG
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+>> TerminatingError(Invoke-WebRequest): "The remote server returned an error: (400) Bad Request."
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-NsxWebRequest): "Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>"
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request : 
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant 
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], 
+InternalNsxApiException
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+invoke-nsxwebrequest : Invoke-NsxWebRequest : The NSX API response received indicates a failure. 400 : Bad Request :
+Response Body: <?xml version="1.0" encoding="UTF-8"?>
+<error><details>Edge name should be unique for tenant. Edge FCA_VDR_Automation_PESG_INET_S1 already exists for tenant
+Tenant01.</details><errorCode>10084</errorCode><moduleName>vShield Edge</moduleName></error>
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\powernsx-master\PowerNSX.psm1:11986 char:25
++ ... $response = invoke-nsxwebrequest -method "put" -uri $URI -body $body  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidResult: (Invoke-NsxWebRequest:String) [Invoke-NsxWebRequest], InternalNsxApiExcep
+   tion
+    + FullyQualifiedErrorId : NsxAPIFailureResult,Invoke-NsxWebRequest
+
+10/31/2019 1:21:12 PM [PESG] : PESG ID : edge-3226
+10/31/2019 1:21:12 PM [PESG] : -------------appliancesSummary----------------
+10/31/2019 1:21:12 PM [PESG] : Tenant		 	Tenant01
+10/31/2019 1:21:12 PM [PESG] : EdgeDatastore	 	VCAN_NSX_VMW_001
+10/31/2019 1:21:12 PM [PESG] : EdgeCluster	 	CNUVCANEDGE001
+10/31/2019 1:21:12 PM [PESG] : EdgeFolder	 	NSX Edges
+10/31/2019 1:21:12 PM [PESG] : UplinkNetwork	 	INET-CUST-ACCESS-S1
+10/31/2019 1:21:12 PM [PESG] : NsxTransportZone	Transit-UTZ
+10/31/2019 1:21:12 PM [PESG] : RoutingURL : https://10.19.249.20/api/4.0/edges/edge-3226/routing/config
+10/31/2019 1:21:26 PM [Main]
+10/31/2019 1:21:26 PM [ExtNetwork] : Script version: v1.0.1
+10/31/2019 1:21:26 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+10/31/2019 1:21:27 PM [ExtNetwork] : PowerCli connected to vCenter
+10/31/2019 1:21:27 PM [ExtNetwork] : The Site FCA_VDR is selected
+10/31/2019 1:21:27 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+10/31/2019 1:21:27 PM [ExtNetwork] : The API Version 27.0 is selected
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Add-Type): "Cannot add type. The type name 'TrustAllCertsPolicy' already exists."
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+add-type : Cannot add type. The type name 'TrustAllCertsPolicy' already exists.
+At D:\Scripts\OCBOPS\fca-customer-creation\Modules\VCD-functions.ps1:9 char:4
++             add-type @"
++             ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (TrustAllCertsPolicy:String) [Add-Type], Exception
+    + FullyQualifiedErrorId : TYPE_ALREADY_EXISTS,Microsoft.PowerShell.Commands.AddTypeCommand
+
+10/31/2019 1:21:28 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+10/31/2019 1:21:28 PM [ExtNetwork] : User FCA_SE@system authenticated
+10/31/2019 1:21:28 PM [ExtNetwork] : Get Org List
+10/31/2019 1:21:28 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgTemplate.xml
+10/31/2019 1:21:28 PM [ExtNetwork] : Creating Org :
+PS D:\Scripts\OCBOPS\fca-customer-creation> TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+10/31/2019 1:21:28 PM [ExtNetwork] : Script Terminated
+10/31/2019 1:21:28 PM [Main]
+**********************
+Windows PowerShell transcript end
+End time: 20191031132128
+**********************

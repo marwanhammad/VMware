@@ -1,0 +1,75 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190925185509
+Username: EQ1ADM\mhammad.DCO
+RunAs User: EQ1ADM\mhammad.DCO
+Machine: VNUINFRATOOL01 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 51192
+PSVersion: 5.1.14409.1018
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14409.1018
+BuildVersion: 10.0.14409.1018
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+9/25/2019 6:55:09 PM [Main] : Script version: v1.0.1
+9/25/2019 6:55:09 PM [Main] : ImportModule ConvertTo-IPv4MaskString.ps1
+9/25/2019 6:55:09 PM [Main] : ImportModule Debug-Functions.ps1
+9/25/2019 6:55:09 PM [Main] : ImportModule Exit-function.ps1
+9/25/2019 6:55:09 PM [Main] : ImportModule Get-Inifile.ps1
+9/25/2019 6:55:09 PM [Main] : ImportModule Get-ScriptVersion.ps1
+9/25/2019 6:55:09 PM [Main] : ImportModule NSX-Functions.ps1
+9/25/2019 6:55:09 PM [Main] : ImportModule VCD-functions.ps1
+9/25/2019 6:55:09 PM [Main] : Import customer file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_SE_CUST_TEMPLATE.xml
+9/25/2019 6:55:09 PM [Main] : Site Name  FCA_VDR
+9/25/2019 6:55:09 PM [Main] : Import site file D:\Scripts\OCBOPS\fca-customer-creation\Customers-info\FCA_VDR.ini
+9/25/2019 6:55:09 PM [Main]
+9/25/2019 6:55:09 PM [ExtNetwork] : Script version: v1.0.1
+9/25/2019 6:55:09 PM [ExtNetwork] : PowerCli connection to vCenter : 10.19.249.9
+
+Name                           Port  User
+----                           ----  ----
+10.19.249.9                    443   VSPHERE.LOCAL\onboarding
+9/25/2019 6:55:14 PM [ExtNetwork] : PowerCli connected to vCenter
+9/25/2019 6:55:14 PM [ExtNetwork] : The Site FCA_VDR is selected
+9/25/2019 6:55:14 PM [ExtNetwork] : The API URL api-3.flexible-computing-advanced.orange-business.com is selected
+9/25/2019 6:55:14 PM [ExtNetwork] : The API Version 27.0 is selected
+9/25/2019 6:55:16 PM [ExtNetwork] : Authenticating FCA_SE@system against api-3.flexible-computing-advanced.orange-business.com
+9/25/2019 6:55:17 PM [ExtNetwork] : User FCA_SE@system authenticated
+9/25/2019 6:55:50 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\ExternalNetwork.xml
+9/25/2019 6:55:52 PM [ExtNetwork] : Updating XML ADMIN External Network file
+9/25/2019 6:55:53 PM [ExtNetwork] : Admin External Network already exist:FCA_VDR_Automation_ADMIN_INTERCO_vCDESG_S1
+9/25/2019 6:55:54 PM [ExtNetwork] : Updating INET External Network   XML file
+9/25/2019 6:55:55 PM [ExtNetwork] : Inet External Network already exist:FCA_VDR_Automation_INET_INTERCO_vCDESG_S1
+9/25/2019 6:55:55 PM [ExtNetwork] : Get Org List
+9/25/2019 6:55:55 PM [ExtNetwork] : Org already exist :FCA_VDR_Automation
+9/25/2019 6:55:55 PM [ExtNetwork] : Get existing one :FCA_VDR_Automation
+9/25/2019 6:55:57 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\UserTemplate.xml
+9/25/2019 6:55:57 PM [ExtNetwork] : Creating New User :System.Xml.XmlElement.Name
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+9/25/2019 6:55:57 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\UserTemplate.xml
+9/25/2019 6:55:57 PM [ExtNetwork] : Creating New User :System.Xml.XmlElement.Name
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+9/25/2019 6:55:57 PM [ExtNetwork] : Get Existing OrgVDC List
+9/25/2019 6:55:57 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCTemplate.xml
+9/25/2019 6:55:57 PM [ExtNetwork] : Get PVDCs List
+9/25/2019 6:56:07 PM [ExtNetwork] : Get PVDC Info : PVDCNUVDRVCAN01
+9/25/2019 6:56:27 PM [ExtNetwork] : Creating OrgVDC :OrgVDC1
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+9/25/2019 6:56:27 PM [ExtNetwork] : Import XML file D:\Scripts\OCBOPS\fca-customer-creation\Templates\OrgVDCTemplate.xml
+9/25/2019 6:56:27 PM [ExtNetwork] : Get PVDCs List
+9/25/2019 6:56:44 PM [ExtNetwork] : Get PVDC Info : PVDCNUVDRVCAN01
+9/25/2019 6:57:01 PM [ExtNetwork] : Creating OrgVDC :OrgVDC2
+PS>TerminatingError(Invoke-RestMethod): "The remote server returned an error: (400) Bad Request."
+WARNING: Invoke-vCloud Exception: The remote server returned an error: (400) Bad Request.
+9/25/2019 6:57:01 PM [Main]
+**********************
+Windows PowerShell transcript end
+End time: 20190925185701
+**********************
