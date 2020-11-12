@@ -1,9 +1,0 @@
-<User xmlns="http://www.vmware.com/vcloud/v1.5" name="User_Name">
-    <FullName>User_FullName</FullName>
-    <EmailAddress>User_Email</EmailAddress>
-    <Telephone>User_Telephone</Telephone>
-    <IsEnabled>true</IsEnabled>
-    <Role href="VCDUser_Role"/>
-    <Password>User_Password</Password>
-    <GroupReferences/>
-</User>
