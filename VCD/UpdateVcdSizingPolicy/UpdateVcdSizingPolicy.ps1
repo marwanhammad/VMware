@@ -14,7 +14,7 @@
 				Make sure that api version 34.0 is supported in the traget v
 		 ============================================================================
 	.EXAMPLES
-	PS C:\> .\UpdateVcdSizingPolicy.ps1 -vcdHost '' -tenant '' -username '' -password ''
+	PS C:\> .\UpdateVcdSizingPolicy.ps1 -vcdHost '' -tenant '' -username '' -password '' -csvFile ''
 #>
 
 #--------------------------------------------------------------------------
