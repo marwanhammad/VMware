@@ -245,7 +245,7 @@ foreach ($orgVCD in $responseQueryOrgVdc.QueryResultRecords.OrgVdcRecord){
 	$VMs
 	
 	foreach ($VM in $VMs){
-		 = $VM.href
+		$VMhref = $VM.href
 		$VMname = $VM.name
 		$current_vmSizingPolicyId  = $VM.vmSizingPolicyId
 		$current_vmSizingPolicyURN = "urn:vcloud:vdcComputePolicy:" + $VM.vmSizingPolicyId
@@ -256,7 +256,7 @@ foreach ($orgVCD in $responseQueryOrgVdc.QueryResultRecords.OrgVdcRecord){
 		$target_vmSizingPolicyURN  = $target_vmSizingPolicy.id
 		
 
-		if(($current_vmSizingPolicyURN -eq $target_vmSizingPolicyURN) -and ($target_vmSizingPolicyURN -ne $null)){
+		if(($current_vmSizingPolicyURN -eq $target_vmSizingPolicyURN) -or ($target_vmSizingPolicyURN -eq $null)){
 			Write-Host (Get-Date).ToString() "$ScriptIdentifier : Skip VM: $VMname ,Sizing policy $current_vmSizingPolicyName"
 		}else{
 			Write-Host (Get-Date).ToString() "$ScriptIdentifier : Update VM: $VMname from: $current_vmSizingPolicyName to: $target_vmSizingPolicyName"
