@@ -127,14 +127,25 @@ try{
 }
 # $ImportedVMs.'VM Name'
 # $ImportedVMs.'Policy Name'
-try{
+
+
+###Configure REST authentication
+add-type @"
+    using System.Net;
+    using System.Security.Cryptography.X509Certificates;
+    public class TrustAllCertsPolicy : ICertificatePolicy {
+        public bool CheckValidationResult(
+            ServicePoint srvPoint, X509Certificate certificate,
+            WebRequest request, int certificateProblem) {
+            return true;
+        }
+    }
+"@
+#Start-Transcript -Append -NoClobber -Path $exportFolder"LogVapp.log"
+
 #Force TLS1.2 for vCD 8.20
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 
 [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
-}catch{
-	Write-Host (Get-Date).ToString() "$ScriptIdentifier : ignore vcd certificates errors"
-}
-
 
 $servicePoint = [System.Net.ServicePointManager]::FindServicePoint("https://$vcdHost/api/1.5") 
 $ServicePoint.ConnectionLimit = 100
@@ -275,7 +286,10 @@ foreach ($orgVCD in $responseQueryOrgVdc.QueryResultRecords.OrgVdcRecord){
 			
 			$ContentType = "application/vnd.vmware.vcloud.vm+xml;version="+$apiver
 			$updateVMhref = $VMhref + "/action/reconfigureVm"
-			$UpdateVM = Invoke-RestMethod -Method Post -Uri $updateVMhref -Body $responseVM -ContentType $ContentType -Headers $headers
+			write-host $ContentType
+			write-host $updateVMhref
+			$responseVM.Vm.ComputePolicy.VmSizingPolicy | fl
+			$UpdateVM = Invoke-RestMethod -Method Post -Uri $updateVMhref -Body $responseVM -ContentType $ContentType -Headers $headers -WebSession $MYSESSION
 		}
 	}
 }
