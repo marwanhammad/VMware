@@ -35,7 +35,10 @@ param (
         [string]$vcdHost,
 	[Parameter (Mandatory=$true)]
         # csv file name
-        [string]$csvFile		
+        [string]$csvFile,
+	[Parameter (Mandatory=$false)]
+        # EnableDebug
+        [string]$EnableDebug = $false
 )
 
 $username =$username +'@'+ $tenant
@@ -280,16 +283,24 @@ foreach ($orgVCD in $responseQueryOrgVdc.QueryResultRecords.OrgVdcRecord){
 			$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("id",$target_vmSizingPolicyURN)
 			$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("name",$target_vmSizingPolicyName)
 			
+			# compute
+			$responseVM.Vm.VdcComputePolicy.SetAttribute("href","https://"+$vcdHost+"/cloudapi/1.0.0/vdcComputePolicies/" + $target_vmSizingPolicyURN)
+			$responseVM.Vm.VdcComputePolicy.SetAttribute("id",$target_vmSizingPolicyURN)
+			$responseVM.Vm.VdcComputePolicy.SetAttribute("name",$target_vmSizingPolicyName)
+			
 			#$myFile = 'tempsomefile.xml'
 			#$responseVM.Save($myFile)
 			#$var = Get-Content $myFile
 			
 			$ContentType = "application/vnd.vmware.vcloud.vm+xml;version="+$apiver
 			$updateVMhref = $VMhref + "/action/reconfigureVm"
-			write-host $ContentType
-			write-host $updateVMhref
-			$responseVM.Vm.ComputePolicy.VmSizingPolicy | fl
-			$UpdateVM = Invoke-RestMethod -Method Post -Uri $updateVMhref -Body $responseVM -ContentType $ContentType -Headers $headers -WebSession $MYSESSION
+			if ($EnableDebug){
+				write-host $ContentType
+				write-host $updateVMhref
+				$responseVM.Vm.ComputePolicy.VmSizingPolicy | fl
+				$responseVM.Vm.VdcComputePolicy | fl
+			}
+			$UpdateVM = Invoke-WebRequest -Method Post -Uri $updateVMhref -Body $responseVM -ContentType $ContentType -Headers $headers -WebSession $MYSESSION
 		}
 	}
 }
