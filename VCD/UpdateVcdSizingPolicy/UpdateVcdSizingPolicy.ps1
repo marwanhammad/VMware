@@ -7,6 +7,7 @@
 	 Filename:		UpdateVcdSizingPolicy.ps1
 	---------------------------------------------------------------------------
 	v1.0.0	---	Initial Creation								---	2022-03-09
+	v1.1.0	---	ignore not set sizing policy					---	2022-03-21
 	===========================================================================
 	.DESCRIPTION
 		 ============================================================================
@@ -270,19 +271,33 @@ foreach ($orgVCD in $responseQueryOrgVdc.QueryResultRecords.OrgVdcRecord){
 		$target_vmSizingPolicyURN  = $target_vmSizingPolicy.id
 		
 
-		if(($current_vmSizingPolicyURN -eq $target_vmSizingPolicyURN) -or ($target_vmSizingPolicyURN -eq $null)){
+		if($current_vmSizingPolicyURN -eq $target_vmSizingPolicyURN){
 			Write-Host (Get-Date).ToString() "$ScriptIdentifier : Skip VM: $VMname ,Sizing policy $current_vmSizingPolicyName"
+		}elseif($target_vmSizingPolicyURN -eq $null){
+			Write-Host (Get-Date).ToString() "$ScriptIdentifier : Skip VM: $VMname ,Sizing policy $current_vmSizingPolicyName as target policy $target_vmSizingPolicyName not found"
 		}else{
 			Write-Host (Get-Date).ToString() "$ScriptIdentifier : Update VM: $VMname from: $current_vmSizingPolicyName to: $target_vmSizingPolicyName"
 			$responseVM = Invoke-RestMethod -Uri $VMhref -Headers $headers -Method GET -WebSession $MYSESSION
 			
 			##Update XML
-			# $xmlAdminOrg.SetAttribute("name",$targetOrg)
+			try{
+				$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("href","https://"+$vcdHost+"/cloudapi/1.0.0/vdcComputePolicies/" + $target_vmSizingPolicyURN)
+			}catch{
+				write-host -NoNewline " "
+			}
 			
-			$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("href","https://"+$vcdHost+"/cloudapi/1.0.0/vdcComputePolicies/" + $target_vmSizingPolicyURN)
-			$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("id",$target_vmSizingPolicyURN)
-			$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("name",$target_vmSizingPolicyName)
+			try{
+				$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("id",$target_vmSizingPolicyURN) -erroraction 'silentlycontinue'
+			}catch{
+				write-host -NoNewline " "
+			}
 			
+			try{
+				$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("name",$target_vmSizingPolicyName)
+			}catch{
+				write-host -NoNewline " "
+			}
+						
 			# compute
 			$responseVM.Vm.VdcComputePolicy.SetAttribute("href","https://"+$vcdHost+"/cloudapi/1.0.0/vdcComputePolicies/" + $target_vmSizingPolicyURN)
 			$responseVM.Vm.VdcComputePolicy.SetAttribute("id",$target_vmSizingPolicyURN)
