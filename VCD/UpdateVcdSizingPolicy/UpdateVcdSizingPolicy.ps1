@@ -287,7 +287,7 @@ foreach ($orgVCD in $responseQueryOrgVdc.QueryResultRecords.OrgVdcRecord){
 			}
 			
 			try{
-				$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("id",$target_vmSizingPolicyURN) -erroraction 'silentlycontinue'
+				$responseVM.Vm.ComputePolicy.VmSizingPolicy.SetAttribute("id",$target_vmSizingPolicyURN)
 			}catch{
 				write-host -NoNewline " "
 			}
