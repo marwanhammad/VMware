@@ -12,11 +12,11 @@ $Scriptversion = '2018.01.30'
 #--------------------------------------------------------------------------
 
 ####vCenter 
-$EPPvCenterIP = "10.19.249.13"	
+$EPPvCenterIP = ""	
 #UserName do not forget @ domain name
-$EPPvCenterUser = "svc_ocp_epp_vc@vsphere.local"
+$EPPvCenterUser = ""
 #password
-$EPPvCenterPass='yk7!8w!$6S'
+$EPPvCenterPass=''
 
 
 #------------------------
